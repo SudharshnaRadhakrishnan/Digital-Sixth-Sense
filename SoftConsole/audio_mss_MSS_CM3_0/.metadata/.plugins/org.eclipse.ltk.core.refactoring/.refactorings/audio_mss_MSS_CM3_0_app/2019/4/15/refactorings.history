@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;audio_mss_MSS_CM3_0_app/motor_control&apos; to &apos;motor_control.c&apos;" description="Rename resource &apos;motor_control&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="motor_control" name="motor_control.c" stamp="1555087502849" updateReferences="true"/>
+</session>

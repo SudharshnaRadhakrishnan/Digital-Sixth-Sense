@@ -1,0 +1,26 @@
+Microsemi Libero Software
+Version: 11.9.0.4
+Release: v11.9
+
+'IDE_DESIGNERVIEW_ROOTDIR' set to
+'C:\Users\aybasha\Downloads\DigitalSixthSense_audioTest\designer'
+Info: The design audio_mss.adb was last modified by software version 11.9.0.4.
+Opened an existing Libero design audio_mss.adb.
+
+The Execute Script command succeeded ( 00:00:24 )
+Design saved to file
+C:\Users\aybasha\Downloads\DigitalSixthSense_audioTest\designer\impl1\audio_mss.adb.
+Wrote pin report to file:
+C:\Users\aybasha\Downloads\DigitalSixthSense_audioTest\designer\impl1\audio_mss_report_pin_byna\
+me.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote pin report to file:
+C:\Users\aybasha\Downloads\DigitalSixthSense_audioTest\designer\impl1\audio_mss_report_pin_bynu\
+mber.txt
+
+The Report command succeeded ( 00:00:01 )
+
+The Execute Script command succeeded ( 00:00:01 )
+Design closed.
+

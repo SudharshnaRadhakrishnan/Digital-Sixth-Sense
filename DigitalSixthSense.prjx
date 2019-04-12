@@ -1,0 +1,626 @@
+KEY LIBERO "11.9"
+KEY CAPTURE "11.9.0.4"
+KEY DEFAULT_IMPORT_LOC "C:\Libero_projects\test_fabric2\hdl"
+KEY DEFAULT_OPEN_LOC ""
+KEY ProjectID "0"
+KEY HDLTechnology "VERILOG"
+KEY VERILOGMODE "VERILOG2001"
+KEY VHDLMODE "VHDL2008"
+KEY UseConstraintFlowTechnology "FALSE"
+KEY VendorTechnology_Family "SmartFusion"
+KEY VendorTechnology_Die "IP4X3M1"
+KEY VendorTechnology_Package "fg484"
+KEY VendorTechnology_Speed "STD"
+KEY VendorTechnology_DieVoltage "1.5"
+KEY VendorTechnology_PART_RANGE "COM"
+KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE ""
+KEY VendorTechnology_IO_DEFT_STD "LVTTL"
+KEY VendorTechnology_OPCONR ""
+KEY VendorTechnology_PLL_SUPPLY ""
+KEY VendorTechnology_RAD_EXPOSURE ""
+KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
+KEY VendorTechnology_RESTRICTPROBEPINS "1"
+KEY VendorTechnology_RESTRICTSPIPINS "0"
+KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE ""
+KEY VendorTechnology_TARGETDEVICESFORMIGRATION "IP4X3M1"
+KEY VendorTechnology_TEMPR "COM"
+KEY VendorTechnology_UNUSED_MSS_IO_RESISTOR_PULL "None"
+KEY VendorTechnology_VCCI_1.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
+KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
+KEY VendorTechnology_VOLTR "COM"
+KEY ProjectLocation "C:\Users\aybasha\Downloads\DigitalSixthSense_audioTest"
+KEY ProjectDescription ""
+KEY Pa4PeripheralNewSeq "GOOD"
+KEY SimulationType "VERILOG"
+KEY Vendor "Actel"
+KEY ActiveRoot "audio_mss::work"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+CURREV=1
+ENDLIST
+LIST LIBRARIES
+MSS_BFM_LIB
+ENDLIST
+LIST LIBRARY_MSS_BFM_LIB
+ALIAS=..\component\Actel\SmartFusionMSS\MSS\2.5.200\mti\user_verilog\MSS_BFM_LIB
+COMPILE_OPTION=REFRESH_AND_COMPILE
+CUSTOMPATH=false
+ENDLIST
+LIST FileManager
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS\2.5.200\MSS.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087268"
+SIZE="945"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v,hdl"
+STATE="utd"
+TIME="1536348874"
+SIZE="11243"
+PARENT="<project>\component\Actel\SmartFusionMSS\MSS\2.5.200\MSS.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideSYNTHESIS"
+TOOL_CONSTRAINT_USE="SYNPLIFY7_EXT"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_ACE\2.2.100\MSS_ACE.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087265"
+SIZE="252"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_CCC\2.0.106\MSS_CCC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087266"
+SIZE="252"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_CM3\1.0.200\MSS_CM3.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087266"
+SIZE="252"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_COM\1.0.200\MSS_COM.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087266"
+SIZE="252"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_DMA\1.0.101\MSS_DMA.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087266"
+SIZE="252"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_ENVM\2.3.200\MSS_ENVM.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087267"
+SIZE="253"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_FIC\1.0.101\MSS_FIC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087267"
+SIZE="252"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_FIO\1.0.203\MSS_FIO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087267"
+SIZE="252"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_GPIO\1.0.101\MSS_GPIO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087267"
+SIZE="253"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_I2C\1.0.101\MSS_I2C.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087267"
+SIZE="252"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_INTR\1.0.101\MSS_INTR.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087267"
+SIZE="253"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_RESET\1.0.101\MSS_RESET.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087267"
+SIZE="254"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_RTC\1.0.100\MSS_RTC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087267"
+SIZE="252"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_TIMER\1.0.100\MSS_TIMER.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087267"
+SIZE="254"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_UART\1.0.101\MSS_UART.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087267"
+SIZE="253"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_UFROM\1.0.100\MSS_UFROM.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087267"
+SIZE="254"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\work\audio_des\audio_des.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087280"
+SIZE="6223"
+ENDFILE
+VALUE "<project>\component\work\audio_des\audio_des.pdc,pdc"
+STATE="utd"
+TIME="1555087280"
+SIZE="2312"
+PARENT="<project>\component\work\audio_des\audio_des.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideDESIGNER"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\audio_des\audio_des.v,hdl"
+STATE="utd"
+TIME="1555087280"
+SIZE="3105"
+PARENT="<project>\component\work\audio_des\audio_des.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\audio_mss\audio_mss.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087271"
+SIZE="12980"
+ENDFILE
+VALUE "<project>\component\work\audio_mss\audio_mss.pdc,pdc"
+STATE="utd"
+TIME="1555087262"
+SIZE="1761"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideDESIGNER"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\audio_mss\audio_mss.v,hdl"
+STATE="utd"
+TIME="1555087270"
+SIZE="21212"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\audio_mss\MSS_ACE_0\MSS_ACE_0.log,???"
+STATE="utd"
+TIME="1555087265"
+SIZE="31587"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\audio_mss\MSS_CCC_0\audio_mss_tmp_MSS_CCC_0_MSS_CCC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087266"
+SIZE="485"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\component\work\audio_mss\MSS_CCC_0\audio_mss_tmp_MSS_CCC_0_MSS_CCC.v,hdl"
+STATE="utd"
+TIME="1555087266"
+SIZE="2904"
+PARENT="<project>\component\work\audio_mss\MSS_CCC_0\audio_mss_tmp_MSS_CCC_0_MSS_CCC.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\audio_mss\MSS_ENVM_0\MSS_ENVM_0.efc,efc"
+STATE="utd"
+TIME="1555087267"
+SIZE="17352"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\audio_mss\mss_tshell.v,hdl"
+STATE="utd"
+TIME="1555087267"
+SIZE="12226"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideSYNTHESIS"
+TOOL_CONSTRAINT_USE="SYNPLIFY7_EXT"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf,actgen_cxf"
+STATE="utd"
+TIME="1555087265"
+SIZE="3211"
+ENDFILE
+VALUE "<project>\component\work\DESIGN_IO\DESIGN_IO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1554822046"
+SIZE="413"
+ENDFILE
+VALUE "<project>\designer\impl1\audio_mss.adb,adb"
+STATE="utd"
+TIME="1555087352"
+SIZE="272384"
+ENDFILE
+VALUE "<project>\designer\impl1\audio_mss.fdb,fdb"
+STATE="utd"
+TIME="1555087352"
+SIZE="32839"
+ENDFILE
+VALUE "<project>\designer\impl1\audio_mss.ide_des,ide_des"
+STATE="utd"
+TIME="1555087353"
+SIZE="1112"
+ENDFILE
+VALUE "<project>\designer\impl1\audio_mss_compile_log.rpt,log"
+STATE="utd"
+TIME="1555087293"
+SIZE="27173"
+ENDFILE
+VALUE "<project>\designer\impl1\audio_mss_fp\audio_mss.pdb,pdb"
+STATE="utd"
+TIME="1555087371"
+SIZE="38630"
+ENDFILE
+VALUE "<project>\designer\impl1\audio_mss_fp\audio_mss.pro,pro"
+STATE="utd"
+TIME="1555087410"
+SIZE="2450"
+ENDFILE
+VALUE "<project>\designer\impl1\audio_mss_fp\projectData\audio_mss.pdb,pdb"
+STATE="utd"
+TIME="1555087410"
+SIZE="38630"
+ENDFILE
+VALUE "<project>\designer\impl1\audio_mss_placeroute_log.rpt,log"
+STATE="utd"
+TIME="1555087340"
+SIZE="2669"
+ENDFILE
+VALUE "<project>\designer\impl1\audio_mss_prgdata_log.rpt,log"
+STATE="utd"
+TIME="1555087353"
+SIZE="742"
+ENDFILE
+VALUE "<project>\designer\impl1\audio_mss_verifytiming_log.rpt,log"
+STATE="utd"
+TIME="1555087344"
+SIZE="1192"
+ENDFILE
+VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
+STATE="utd"
+TIME="1536348874"
+SIZE="41"
+PARENT="<project>\component\Actel\SmartFusionMSS\MSS\2.5.200\MSS.cxf"
+ENDFILE
+VALUE "<project>\simulation\test.bfm,sim"
+STATE="utd"
+TIME="1555087266"
+SIZE="9461"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\simulation\user.bfm,sim"
+STATE="utd"
+TIME="1554821628"
+SIZE="670"
+PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
+ENDFILE
+VALUE "<project>\synthesis\audio_mss.edn,syn_edn"
+STATE="utd"
+TIME="1555087286"
+SIZE="102872"
+ENDFILE
+VALUE "<project>\synthesis\audio_mss.so,so"
+STATE="utd"
+TIME="1555087286"
+SIZE="242"
+ENDFILE
+VALUE "<project>\synthesis\audio_mss_sdc.sdc,syn_sdc"
+STATE="utd"
+TIME="1555087286"
+SIZE="310"
+ENDFILE
+VALUE "<project>\synthesis\audio_mss_syn.prj,prj"
+STATE="utd"
+TIME="1555087286"
+SIZE="2164"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+LIST "audio_des::work"
+FILE "<project>\component\work\audio_des\audio_des.v,hdl"
+LIST Other_Association
+VALUE "<project>\component\work\audio_des\audio_des.pdc,pdc"
+ENDLIST
+ENDLIST
+LIST "audio_mss::work"
+FILE "<project>\component\work\audio_mss\audio_mss.v,hdl"
+LIST Other_Association
+VALUE "<project>\simulation\user.bfm,sim"
+VALUE "<project>\simulation\test.bfm,sim"
+VALUE "<project>\component\work\audio_mss\audio_mss.pdc,pdc"
+VALUE "<project>\component\work\audio_mss\MSS_ENVM_0\MSS_ENVM_0.efc,efc"
+VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\audio_mss.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\audio_mss.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST PinReports
+VALUE "<project>\designer\impl1\audio_mss_report_pin_byname.txt,log"
+VALUE "<project>\designer\impl1\audio_mss_report_pin_bynumber.txt,log"
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+ENDLIST
+LIST Other_Association
+LIST audio_des
+VALUE "<project>\component\work\audio_des\audio_des.pdc,pdc"
+ENDLIST
+LIST audio_mss
+VALUE "<project>\simulation\user.bfm,sim"
+VALUE "<project>\simulation\test.bfm,sim"
+VALUE "<project>\component\work\audio_mss\audio_mss.pdc,pdc"
+VALUE "<project>\component\work\audio_mss\MSS_ENVM_0\MSS_ENVM_0.efc,efc"
+VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
+ENDLIST
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=1000ns
+Resolution=1ps
+VsimOpt=
+EntityName=testbench
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DisablePulseFiltering=false
+DumpVCD=false
+VCDFileName=power.vcd
+VHDL2008=false
+Verilog2001=false
+SystemVerilog=false
+TimeUnit=1
+TimeUnitBase=ns
+Precision=100
+PrecisionBase=ps
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=TRUE
+AutoCheckConstraints=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+PeriInitStandalone=FALSE
+EnableViewDraw=FALSE
+UpdateViewDrawIni=TRUE
+GenerateHDLFromSchematic=TRUE
+VmNetlistFlowOn=FALSE
+EnableDesignSeparationOn=FALSE
+EnableSETMitigationOn=FALSE
+DisplayFanoutLimit=10
+AbortFlowOnPDCErrorsOn=TRUE
+AbortFlowOnSDCErrorsOn=TRUE
+InstantiateInSmartDesign=FALSE
+FlashProInputFile=fdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+NAME="SoftConsole33"
+FUNCTION="SoftwareIDE"
+TOOL="SoftConsole"
+LOCATION="C:\Microsemi\SoftConsole v3.3\Eclipse\eclipse.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Synplify Pro ME"
+FUNCTION="Synthesis"
+TOOL="Synplify Pro ME"
+LOCATION="C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\synplify_pro.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="ModelSim ME"
+FUNCTION="Simulation"
+TOOL="ModelSim"
+LOCATION="C:\Microsemi\Libero_SoC_v11.9\Modelsim\win32acoem\modelsim.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="FPExpress"
+FUNCTION="Program"
+TOOL="FlashPro"
+LOCATION="C:\Microsemi\Libero_SoC_v11.9\Designer\bin\FPExpress.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Identify Debugger"
+FUNCTION="IdentifyDebugger"
+TOOL="Identify Debugger"
+LOCATION="C:\Microsemi\Libero_SoC_v11.9\Identify\bin\identify_debugger.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+LIST "audio_mss::work"
+LIST Impl1
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\audio_mss.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\audio_mss.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+Reports;Reports;0
+ReportsCurrentItem;Generate Programming Data:audio_mss_prgdata_log.rpt
+StartPage;StartPage;0
+SmartDesign;audio_mss;0
+SmartDesign;audio_des;0
+ACTIVEVIEW;Reports
+ENDLIST
+LIST ModuleSubBlockList
+LIST "audio_des::work","component\work\audio_des\audio_des.v","TRUE","FALSE"
+SUBBLOCK "audio_mss::work","component\work\audio_mss\audio_mss.v","TRUE","FALSE"
+ENDLIST
+LIST "audio_mss::work","component\work\audio_mss\audio_mss.v","TRUE","FALSE"
+SUBBLOCK "BIBUF_OPEND_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+SUBBLOCK "INBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+SUBBLOCK "MSSINT::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+SUBBLOCK "MSS_APB::work","component\work\audio_mss\mss_tshell.v","FALSE","FALSE"
+SUBBLOCK "OUTBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+SUBBLOCK "audio_mss_tmp_MSS_CCC_0_MSS_CCC::work","component\work\audio_mss\MSS_CCC_0\audio_mss_tmp_MSS_CCC_0_MSS_CCC.v","FALSE","FALSE"
+ENDLIST
+LIST "audio_mss_tmp_MSS_CCC_0_MSS_CCC::work","component\work\audio_mss\MSS_CCC_0\audio_mss_tmp_MSS_CCC_0_MSS_CCC.v","FALSE","FALSE"
+SUBBLOCK "MSS_CCC::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "BIBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "BIBUF_OPEND_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "DESIGN_FIRMWARE::work","component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf","TRUE","FALSE"
+SUBBLOCK "HAL::work","","FALSE","FALSE"
+SUBBLOCK "MSS_ACE_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_GPIO_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_I2C_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_IAP_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_NVM_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_PDMA_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_RTC_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_Timer_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_UART_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion_CMSIS_PAL::work","","FALSE","FALSE"
+ENDLIST
+LIST "DESIGN_IO::work","component\work\DESIGN_IO\DESIGN_IO.cxf","TRUE","FALSE"
+ENDLIST
+LIST "HAL::work","","FALSE","FALSE"
+ENDLIST
+LIST "INBUF_LVDS_MCCC::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "INBUF_LVPECL_MCCC::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "INBUF_MCCC::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "INBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "MSS_ACE_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_ALL::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "MSS_APB::work","component\work\audio_mss\mss_tshell.v","FALSE","FALSE"
+ENDLIST
+LIST "MSS_CCC::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "MSS_GPIO_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_I2C_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_IAP_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_LPXTLOSC::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "MSS_NVM_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_PDMA_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_RTC_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_Timer_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_UART_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_XTLOSC::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "MSSINT::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "OUTBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion_CMSIS_PAL::work","","FALSE","FALSE"
+ENDLIST
+LIST "TRIBUFF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v","FALSE","FALSE"
+ENDLIST
+ENDLIST
+LIST ActiveTestBenchList
+ENDLIST
+LIST IOTabList
+ENDLIST
+LIST FPTabList
+ENDLIST
+LIST TimingTabList
+ENDLIST
+LIST FDCTabList
+ENDLIST
