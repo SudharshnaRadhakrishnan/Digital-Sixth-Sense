@@ -10,6 +10,8 @@
 #include <assert.h>
 #include <math.h>
 
+uint32_t mode = 0; //MODE 0 = all on, MODE 1 = gradual
+
 double logcalculator(int pow){
 	return exp(pow) + 30;
 }
@@ -21,7 +23,19 @@ int main()
 	MSS_GPIO_config(MSS_GPIO_1, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
     MSS_GPIO_enable_irq( MSS_GPIO_1);
 
-	//MSS_GPIO_set_output(MSS_GPIO_0, 255);
+    MSS_GPIO_config(MSS_GPIO_2, MSS_GPIO_OUTPUT_MODE);
+    MSS_GPIO_config(MSS_GPIO_3, MSS_GPIO_OUTPUT_MODE);
+    MSS_GPIO_config(MSS_GPIO_4, MSS_GPIO_OUTPUT_MODE);
+    MSS_GPIO_config(MSS_GPIO_5, MSS_GPIO_OUTPUT_MODE);
+    MSS_GPIO_config(MSS_GPIO_6, MSS_GPIO_OUTPUT_MODE);
+    MSS_GPIO_set_outputs(~(MSS_GPIO_2_MASK | MSS_GPIO_3_MASK | MSS_GPIO_4_MASK | MSS_GPIO_5_MASK | MSS_GPIO_6_MASK));
+
+
+	/*MSS_GPIO_set_output(MSS_GPIO_2, 1);
+    uint32_t gpio_outputs;
+    gpio_outputs = MSS_GPIO_get_outputs();
+    MSS_GPIO_set_output(MSS_GPIO_2, 0);
+    gpio_outputs = MSS_GPIO_get_outputs();*/
 
 	ACE_init();
     /* DAC initialization */
@@ -52,20 +66,44 @@ int main()
     	if(measure_counter == 20000){
     		// FROM LIDAR/MOTOR CODE
 			distance = measure();
-
 			int assign_level = 5;
 			int power = 2;
 			int level = -1;
 			while(assign_level >= 0 && level == -1){
-			    if(distance < logcalculator(power)){
-			    	level = assign_level;
-			    }
-			    assign_level--;
-			    power++;
+				if(distance < logcalculator(power)){
+					level = assign_level;
+				}
+				assign_level--;
+				power++;
+			}
+			if (mode == 0) {
+			    MSS_GPIO_set_outputs(MSS_GPIO_2_MASK | MSS_GPIO_3_MASK | MSS_GPIO_4_MASK | MSS_GPIO_5_MASK | MSS_GPIO_6_MASK);
+				setWaveform(0, 69 - level);
+				go();
 			}
 
-			setWaveform(0, 69 - level);
-	    	go();
+			if (mode == 1) {
+				if (level == 0) {
+				    MSS_GPIO_set_outputs(~(MSS_GPIO_2_MASK | MSS_GPIO_3_MASK | MSS_GPIO_4_MASK | MSS_GPIO_5_MASK | MSS_GPIO_6_MASK));
+				}
+				else if (level == 1) {
+				    MSS_GPIO_set_outputs(MSS_GPIO_2_MASK);
+				}
+				else if (level == 2) {
+				    MSS_GPIO_set_outputs(MSS_GPIO_2_MASK | MSS_GPIO_3_MASK);
+				}
+				else if (level == 3) {
+				    MSS_GPIO_set_outputs(MSS_GPIO_2_MASK | MSS_GPIO_3_MASK | MSS_GPIO_4_MASK);
+				}
+				else if (level == 4) {
+				    MSS_GPIO_set_outputs(MSS_GPIO_2_MASK | MSS_GPIO_3_MASK | MSS_GPIO_4_MASK | MSS_GPIO_5_MASK);
+				}
+				else if (level == 5) {
+				    MSS_GPIO_set_outputs(MSS_GPIO_2_MASK | MSS_GPIO_3_MASK | MSS_GPIO_4_MASK | MSS_GPIO_5_MASK | MSS_GPIO_6_MASK);
+				}
+				setWaveform(0, 64);
+				go();
+			}
 
 			measure_counter = 0;
     	}
@@ -121,5 +159,6 @@ void GPIO1_IRQHandler( void ) {
 	//uint32_t gpioOut = MSS_GPIO_get_outputs();
 	//MSS_GPIO_set_output(MSS_GPIO_0, (~gpioOut));
 	//gpioOut = MSS_GPIO_get_outputs();
+	mode = mode ^ 1;
 	MSS_GPIO_clear_irq( MSS_GPIO_1 );
 }

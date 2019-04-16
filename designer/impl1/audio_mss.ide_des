@@ -20,10 +20,10 @@ KEY IDE_DES_BLOCK_PUBLISH "FALSE"
 KEY IDE_DES_BA_EXPORTED "FALSE"
 KEY IDE_DES_INTERACTIVE "FALSE"
 KEY IDE_DES_ERROR_FOUND "FALSE"
-KEY IDE_DES_ADB_PATH "C:\Users\aybasha\Downloads\DigitalSixthSense_audioTest\designer\impl1\audio_mss.adb"
+KEY IDE_DES_ADB_PATH "C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\designer\impl1\audio_mss.adb"
 LIST SOURCE_FILES
-VALUE "C:\Users\aybasha\Downloads\DigitalSixthSense_audioTest\synthesis\audio_mss.edn;edn"
-VALUE "C:\Users\aybasha\Downloads\DigitalSixthSense_audioTest\component\work\audio_mss\audio_mss.pdc;pdc"
+VALUE "C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\audio_mss.edn;edn"
+VALUE "C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\component\work\audio_mss\audio_mss.pdc;pdc"
 ENDLIST
 LIST OPTIONAL_FILES
 ENDLIST

@@ -1,5 +1,5 @@
 *****************************************************************
-Pin Report - Date: Fri Apr 12 12:42:20 2019 Pinchecksum: NOT-AVAILABLE
+Pin Report - Date: Tue Apr 16 13:08:23 2019 Pinchecksum: NOT-AVAILABLE
 Product: Designer
 Release: v11.9
 Version: 11.9.0.4
@@ -144,7 +144,7 @@ D21                  IO21NDB1V0                    Unassigned
 D22                  GND                           Reserved
 E1                   GFC2/IO67PPB5V0               Special
 E2                   VCCFPGAIOB5                   Reserved
-E3                   GFA2/IO68PDB5V0               Special
+E3      M2F_GPO_2    GFA2/IO68PDB5V0               Special      LVTTL    12                 High  None           ---              No    35                No           No
 E4                   GND                           Reserved
 E5                   Not Bonded                    Unconnected
 E6                   GNDQ                          Reserved
@@ -164,9 +164,9 @@ E19                  GND                           Reserved
 E20                  Not Bonded                    Unconnected
 E21                  VCCFPGAIOB1                   Reserved
 E22                  IO22NDB1V0                    Unassigned
-F1      M2F_GPO_0    GFB1/IO65PPB5V0               Special      LVTTL    12                 High  None           ---              No    35                No           No
+F1                   GFB1/IO65PPB5V0               Special
 F2                   IO67NPB5V0                    Unassigned
-F3                   GFB2/IO68NDB5V0               Special
+F3      M2F_GPO_3    GFB2/IO68NDB5V0               Special      LVTTL    12                 High  None           ---              No    35                No           No
 F4                   EMC_DB[10]/IO69NPB5V0         Unassigned
 F5                   VCCFPGAIOB5                   Reserved
 F6                   VCCPLL                        Reserved
@@ -189,7 +189,7 @@ F22                  IO22PDB1V0                    Unassigned
 G1                   GND                           Reserved
 G2                   GFB0/IO65NPB5V0               Special
 G3                   EMC_DB[9]/GEC1/IO63PDB5V0     Special
-G4                   GFC1/IO66PPB5V0               Special
+G4      M2F_GPO_4    GFC1/IO66PPB5V0               Special      LVTTL    12                 High  None           ---              No    35                No           No
 G5                   EMC_DB[11]/IO69PPB5V0         Unassigned
 G6                   GNDQ                          Reserved
 G7                   Not Bonded                    Unconnected
@@ -212,8 +212,8 @@ H1                   EMC_DB[7]/GEB1/IO62PDB5V0     Special
 H2                   VCCFPGAIOB5                   Reserved
 H3                   EMC_DB[8]/GEC0/IO63NDB5V0     Special
 H4                   GND                           Reserved
-H5                   GFC0/IO66NPB5V0               Special
-H6                   GFA1/IO64PDB5V0               Special
+H5      M2F_GPO_5    GFC0/IO66NPB5V0               Special      LVTTL    12                 High  None           ---              No    35                No           No
+H6      M2F_GPO_6    GFA1/IO64PDB5V0               Special      LVTTL    12                 High  None           ---              No    35                No           No
 H7                   GND                           Reserved
 H8                   VCC                           Reserved
 H9                   GND                           Reserved

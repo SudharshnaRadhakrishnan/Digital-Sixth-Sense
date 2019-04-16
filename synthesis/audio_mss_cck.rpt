@@ -1,7 +1,7 @@
 # Synopsys Constraint Checker, version mapact, Build 2172R, built Oct 30 2017
 # Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
 
-# Written on Fri Apr 12 12:41:25 2019
+# Written on Tue Apr 16 13:02:06 2019
 
 
 ##### DESIGN INFO #######################################################
@@ -43,7 +43,11 @@ p:I2C_1_SCL (bidir end point)
 p:I2C_1_SCL (bidir start point)
 p:I2C_1_SDA (bidir end point)
 p:I2C_1_SDA (bidir start point)
-p:M2F_GPO_0
+p:M2F_GPO_2
+p:M2F_GPO_3
+p:M2F_GPO_4
+p:M2F_GPO_5
+p:M2F_GPO_6
 p:MSS_RESET_N
 p:SDD_1
 p:UART_0_RXD

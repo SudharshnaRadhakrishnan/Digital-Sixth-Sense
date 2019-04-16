@@ -3,7 +3,7 @@ Report for cell audio_mss.verilog
   Core Cell usage:
               cell count     area count*area
                GND     2      0.0        0.0
-            MSSINT     2      0.0        0.0
+            MSSINT     6      0.0        0.0
            MSS_APB     1      0.0        0.0
            MSS_CCC     1      0.0        0.0
              RCOSC     1      0.0        0.0
@@ -11,7 +11,7 @@ Report for cell audio_mss.verilog
 
 
                    -----          ----------
-             TOTAL     9                 0.0
+             TOTAL    13                 0.0
 
 
   IO Cell usage:
@@ -20,15 +20,15 @@ Report for cell audio_mss.verilog
              INBUF     1
            INBUF_A     1
          INBUF_MSS     3
-            OUTBUF     1
+            OUTBUF     5
           OUTBUF_A     1
         OUTBUF_MSS     2
                    -----
-             TOTAL    13
+             TOTAL    17
 
 
 Core Cells         : 0 of 4608 (0%)
-IO Cells           : 13
+IO Cells           : 17
 
   RAM/ROM Usage Summary
 Block Rams : 0 of 8 (0%)

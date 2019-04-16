@@ -2,7 +2,7 @@
 <device>
   <name>audio_mss</name>
   <version>1.0</version>
-  <description>CMSIS description for audio_mss.  Created by Microsemi SmartDesign on Fri Apr 12 12:41:09 2019</description>
+  <description>CMSIS description for audio_mss.  Created by Microsemi SmartDesign on Tue Apr 16 13:01:23 2019</description>
   <addressUnitBits>8</addressUnitBits>
   <width>32</width>
   <peripherals>

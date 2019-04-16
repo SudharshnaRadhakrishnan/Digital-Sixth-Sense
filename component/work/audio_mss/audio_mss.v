@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Apr 12 12:41:08 2019
+// Created by SmartDesign Tue Apr 16 13:01:22 2019
 // Version: v11.9 11.9.0.4
 //////////////////////////////////////////////////////////////////////
 
@@ -14,7 +14,11 @@ module audio_mss(
     UART_1_RXD,
     VAREF1,
     // Outputs
-    M2F_GPO_0,
+    M2F_GPO_2,
+    M2F_GPO_3,
+    M2F_GPO_4,
+    M2F_GPO_5,
+    M2F_GPO_6,
     SDD_1,
     UART_0_TXD,
     UART_1_TXD,
@@ -36,7 +40,11 @@ input  VAREF1;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
-output M2F_GPO_0;
+output M2F_GPO_2;
+output M2F_GPO_3;
+output M2F_GPO_4;
+output M2F_GPO_5;
+output M2F_GPO_6;
 output SDD_1;
 output UART_0_TXD;
 output UART_1_TXD;
@@ -78,14 +86,26 @@ wire          MSS_UART_0_TXD_D;
 wire          MSS_UART_1_RXD_Y;
 wire          MSS_UART_1_TXD_D;
 wire          MSSINT_GPI_1_Y;
-wire   [0:0]  MSSINT_GPO_0_A;
+wire   [2:2]  MSSINT_GPO_2_A;
+wire   [3:3]  MSSINT_GPO_3_A;
+wire   [4:4]  MSSINT_GPO_4_A;
+wire   [5:5]  MSSINT_GPO_5_A;
+wire   [6:6]  MSSINT_GPO_6_A;
 wire          net_71;
+wire          net_72;
+wire          net_73;
+wire          net_74;
+wire          net_75;
 wire          SDD_1_net_0;
 wire          UART_0_RXD;
 wire          UART_0_TXD_net_0;
 wire          UART_1_RXD;
 wire          UART_1_TXD_net_0;
 wire          VAREF1;
+wire          net_75_net_0;
+wire          net_74_net_0;
+wire          net_73_net_0;
+wire          net_72_net_0;
 wire          net_71_net_0;
 wire          UART_0_TXD_net_1;
 wire          UART_1_TXD_net_1;
@@ -119,8 +139,16 @@ assign FABPWDATA_const_net_0 = 32'h00000000;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
+assign net_75_net_0     = net_75;
+assign M2F_GPO_6        = net_75_net_0;
+assign net_74_net_0     = net_74;
+assign M2F_GPO_5        = net_74_net_0;
+assign net_73_net_0     = net_73;
+assign M2F_GPO_4        = net_73_net_0;
+assign net_72_net_0     = net_72;
+assign M2F_GPO_3        = net_72_net_0;
 assign net_71_net_0     = net_71;
-assign M2F_GPO_0        = net_71_net_0;
+assign M2F_GPO_2        = net_71_net_0;
 assign UART_0_TXD_net_1 = UART_0_TXD_net_0;
 assign UART_0_TXD       = UART_0_TXD_net_1;
 assign UART_1_TXD_net_1 = UART_1_TXD_net_0;
@@ -130,7 +158,11 @@ assign SDD_1            = SDD_1_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
-assign MSSINT_GPO_0_A[0] = GPO_net_0[0:0];
+assign MSSINT_GPO_2_A[2] = GPO_net_0[2:2];
+assign MSSINT_GPO_3_A[3] = GPO_net_0[3:3];
+assign MSSINT_GPO_4_A[4] = GPO_net_0[4:4];
+assign MSSINT_GPO_5_A[5] = GPO_net_0[5:5];
+assign MSSINT_GPO_6_A[6] = GPO_net_0[6:6];
 //--------------------------------------------------------------------
 // Concatenation assignments
 //--------------------------------------------------------------------
@@ -530,11 +562,43 @@ MSSINT MSSINT_GPI_1(
         );
 
 //--------MSSINT
-MSSINT MSSINT_GPO_0(
+MSSINT MSSINT_GPO_2(
         // Inputs
-        .A ( MSSINT_GPO_0_A ),
+        .A ( MSSINT_GPO_2_A ),
         // Outputs
         .Y ( net_71 ) 
+        );
+
+//--------MSSINT
+MSSINT MSSINT_GPO_3(
+        // Inputs
+        .A ( MSSINT_GPO_3_A ),
+        // Outputs
+        .Y ( net_72 ) 
+        );
+
+//--------MSSINT
+MSSINT MSSINT_GPO_4(
+        // Inputs
+        .A ( MSSINT_GPO_4_A ),
+        // Outputs
+        .Y ( net_73 ) 
+        );
+
+//--------MSSINT
+MSSINT MSSINT_GPO_5(
+        // Inputs
+        .A ( MSSINT_GPO_5_A ),
+        // Outputs
+        .Y ( net_74 ) 
+        );
+
+//--------MSSINT
+MSSINT MSSINT_GPO_6(
+        // Inputs
+        .A ( MSSINT_GPO_6_A ),
+        // Outputs
+        .Y ( net_75 ) 
         );
 
 

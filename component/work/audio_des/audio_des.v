@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Apr 12 12:41:20 2019
+// Created by SmartDesign Tue Apr 16 13:01:57 2019
 // Version: v11.9 11.9.0.4
 //////////////////////////////////////////////////////////////////////
 
@@ -14,7 +14,11 @@ module audio_des(
     UART_1_RXD,
     VAREF1,
     // Outputs
-    M2F_GPO_0,
+    M2F_GPO_2,
+    M2F_GPO_3,
+    M2F_GPO_4,
+    M2F_GPO_5,
+    M2F_GPO_6,
     SDD_1,
     UART_0_TXD,
     UART_1_TXD,
@@ -36,7 +40,11 @@ input  VAREF1;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
-output M2F_GPO_0;
+output M2F_GPO_2;
+output M2F_GPO_3;
+output M2F_GPO_4;
+output M2F_GPO_5;
+output M2F_GPO_6;
 output SDD_1;
 output UART_0_TXD;
 output UART_1_TXD;
@@ -55,7 +63,11 @@ wire   I2C_0_SCL;
 wire   I2C_0_SDA;
 wire   I2C_1_SCL;
 wire   I2C_1_SDA;
-wire   M2F_GPO_0_net_0;
+wire   M2F_GPO_2_net_0;
+wire   M2F_GPO_3_net_0;
+wire   M2F_GPO_4_net_0;
+wire   M2F_GPO_5_net_0;
+wire   M2F_GPO_6_net_0;
 wire   MSS_RESET_N;
 wire   SDD_1_net_0;
 wire   UART_0_RXD;
@@ -63,21 +75,33 @@ wire   UART_0_TXD_net_0;
 wire   UART_1_RXD;
 wire   UART_1_TXD_net_0;
 wire   VAREF1;
-wire   M2F_GPO_0_net_1;
 wire   SDD_1_net_1;
 wire   UART_0_TXD_net_1;
 wire   UART_1_TXD_net_1;
+wire   M2F_GPO_6_net_1;
+wire   M2F_GPO_5_net_1;
+wire   M2F_GPO_4_net_1;
+wire   M2F_GPO_3_net_1;
+wire   M2F_GPO_2_net_1;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign M2F_GPO_0_net_1  = M2F_GPO_0_net_0;
-assign M2F_GPO_0        = M2F_GPO_0_net_1;
 assign SDD_1_net_1      = SDD_1_net_0;
 assign SDD_1            = SDD_1_net_1;
 assign UART_0_TXD_net_1 = UART_0_TXD_net_0;
 assign UART_0_TXD       = UART_0_TXD_net_1;
 assign UART_1_TXD_net_1 = UART_1_TXD_net_0;
 assign UART_1_TXD       = UART_1_TXD_net_1;
+assign M2F_GPO_6_net_1  = M2F_GPO_6_net_0;
+assign M2F_GPO_6        = M2F_GPO_6_net_1;
+assign M2F_GPO_5_net_1  = M2F_GPO_5_net_0;
+assign M2F_GPO_5        = M2F_GPO_5_net_1;
+assign M2F_GPO_4_net_1  = M2F_GPO_4_net_0;
+assign M2F_GPO_4        = M2F_GPO_4_net_1;
+assign M2F_GPO_3_net_1  = M2F_GPO_3_net_0;
+assign M2F_GPO_3        = M2F_GPO_3_net_1;
+assign M2F_GPO_2_net_1  = M2F_GPO_2_net_0;
+assign M2F_GPO_2        = M2F_GPO_2_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -90,10 +114,14 @@ audio_mss audio_mss_0(
         .UART_0_RXD  ( UART_0_RXD ),
         .UART_1_RXD  ( UART_1_RXD ),
         // Outputs
-        .M2F_GPO_0   ( M2F_GPO_0_net_0 ),
         .SDD_1       ( SDD_1_net_0 ),
         .UART_0_TXD  ( UART_0_TXD_net_0 ),
         .UART_1_TXD  ( UART_1_TXD_net_0 ),
+        .M2F_GPO_6   ( M2F_GPO_6_net_0 ),
+        .M2F_GPO_5   ( M2F_GPO_5_net_0 ),
+        .M2F_GPO_4   ( M2F_GPO_4_net_0 ),
+        .M2F_GPO_3   ( M2F_GPO_3_net_0 ),
+        .M2F_GPO_2   ( M2F_GPO_2_net_0 ),
         // Inouts
         .I2C_1_SCL   ( I2C_1_SCL ),
         .I2C_1_SDA   ( I2C_1_SDA ),

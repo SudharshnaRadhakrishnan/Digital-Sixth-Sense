@@ -1,21 +1,21 @@
 Microsemi Corporation - Microsemi Libero Software Release v11.9 (Version 11.9.0.4)
 
-Date      :  Fri Apr 12 12:41:11 2019
-Project   :  C:\Users\aybasha\Downloads\DigitalSixthSense_audioTest
+Date      :  Tue Apr 16 13:01:25 2019
+Project   :  C:\Users\sradha\Desktop\DigitalSixthSenseUpdate
 Component :  audio_mss
 Family    :  SmartFusion
 
 
 HDL source files for all Synthesis and Simulation tools:
-    C:/Users/aybasha/Downloads/DigitalSixthSense_audioTest/component/work/audio_mss/MSS_CCC_0/audio_mss_tmp_MSS_CCC_0_MSS_CCC.v
-    C:/Users/aybasha/Downloads/DigitalSixthSense_audioTest/component/work/audio_mss/audio_mss.v
+    C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/component/work/audio_mss/MSS_CCC_0/audio_mss_tmp_MSS_CCC_0_MSS_CCC.v
+    C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/component/work/audio_mss/audio_mss.v
 
 HDL source files for Synopsys SynplifyPro Synthesis tool:
-    C:/Users/aybasha/Downloads/DigitalSixthSense_audioTest/component/Actel/SmartFusionMSS/MSS/2.5.200/mss_comps.v
-    C:/Users/aybasha/Downloads/DigitalSixthSense_audioTest/component/work/audio_mss/mss_tshell.v
+    C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/component/Actel/SmartFusionMSS/MSS/2.5.200/mss_comps.v
+    C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/component/work/audio_mss/mss_tshell.v
 
 Stimulus files for all Simulation tools:
-    C:/Users/aybasha/Downloads/DigitalSixthSense_audioTest/component/Actel/SmartFusionMSS/MSS/2.5.200/CompileDssBfm.tcl
-    C:/Users/aybasha/Downloads/DigitalSixthSense_audioTest/component/Actel/SmartFusionMSS/MSS/2.5.200/bfmtovec.exe
-    C:/Users/aybasha/Downloads/DigitalSixthSense_audioTest/component/work/audio_mss/MSS_ENVM_0/test.bfm
+    C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/component/Actel/SmartFusionMSS/MSS/2.5.200/CompileDssBfm.tcl
+    C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/component/Actel/SmartFusionMSS/MSS/2.5.200/bfmtovec.exe
+    C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/component/work/audio_mss/MSS_ENVM_0/test.bfm
 

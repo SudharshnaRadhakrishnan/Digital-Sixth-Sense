@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timeStamp 2019 4 12 12 41 26)
+      (timeStamp 2019 4 16 13 2 6)
       (author "Synopsys, Inc.")
       (program "Synplify Pro" (version "L-2016.09M-SP1-5, mapper mapact, Build 2172R"))
      )
@@ -584,7 +584,11 @@
            (port UART_0_RXD (direction INPUT))
            (port UART_1_RXD (direction INPUT))
            (port VAREF1 (direction INPUT))
-           (port M2F_GPO_0 (direction OUTPUT))
+           (port M2F_GPO_2 (direction OUTPUT))
+           (port M2F_GPO_3 (direction OUTPUT))
+           (port M2F_GPO_4 (direction OUTPUT))
+           (port M2F_GPO_5 (direction OUTPUT))
+           (port M2F_GPO_6 (direction OUTPUT))
            (port SDD_1 (direction OUTPUT))
            (port UART_0_TXD (direction OUTPUT))
            (port UART_1_TXD (direction OUTPUT))
@@ -594,11 +598,27 @@
            (port I2C_1_SDA (direction INOUT))
          )
          (contents
-          (instance M2F_GPO_0_pad (viewRef prim (cellRef OUTBUF (libraryRef smartfusion)))
+          (instance M2F_GPO_6_pad (viewRef prim (cellRef OUTBUF (libraryRef smartfusion)))
+          )
+          (instance M2F_GPO_5_pad (viewRef prim (cellRef OUTBUF (libraryRef smartfusion)))
+          )
+          (instance M2F_GPO_4_pad (viewRef prim (cellRef OUTBUF (libraryRef smartfusion)))
+          )
+          (instance M2F_GPO_3_pad (viewRef prim (cellRef OUTBUF (libraryRef smartfusion)))
+          )
+          (instance M2F_GPO_2_pad (viewRef prim (cellRef OUTBUF (libraryRef smartfusion)))
           )
           (instance F2M_GPI_1_pad (viewRef prim (cellRef INBUF (libraryRef smartfusion)))
           )
-          (instance MSSINT_GPO_0 (viewRef verilog (cellRef MSSINT))
+          (instance MSSINT_GPO_6 (viewRef verilog (cellRef MSSINT))
+          )
+          (instance MSSINT_GPO_5 (viewRef verilog (cellRef MSSINT))
+          )
+          (instance MSSINT_GPO_4 (viewRef verilog (cellRef MSSINT))
+          )
+          (instance MSSINT_GPO_3 (viewRef verilog (cellRef MSSINT))
+          )
+          (instance MSSINT_GPO_2 (viewRef verilog (cellRef MSSINT))
           )
           (instance MSSINT_GPI_1 (viewRef verilog (cellRef MSSINT))
           )
@@ -1861,25 +1881,29 @@
           ))
           (net (rename GPO_net_0_0 "GPO_net_0[0]") (joined
            (portRef (member gpo 31) (instanceRef MSS_ADLIB_INST))
-           (portRef A (instanceRef MSSINT_GPO_0))
           ))
           (net (rename GPO_net_0_1 "GPO_net_0[1]") (joined
            (portRef (member gpo 30) (instanceRef MSS_ADLIB_INST))
           ))
           (net (rename GPO_net_0_2 "GPO_net_0[2]") (joined
            (portRef (member gpo 29) (instanceRef MSS_ADLIB_INST))
+           (portRef A (instanceRef MSSINT_GPO_2))
           ))
           (net (rename GPO_net_0_3 "GPO_net_0[3]") (joined
            (portRef (member gpo 28) (instanceRef MSS_ADLIB_INST))
+           (portRef A (instanceRef MSSINT_GPO_3))
           ))
           (net (rename GPO_net_0_4 "GPO_net_0[4]") (joined
            (portRef (member gpo 27) (instanceRef MSS_ADLIB_INST))
+           (portRef A (instanceRef MSSINT_GPO_4))
           ))
           (net (rename GPO_net_0_5 "GPO_net_0[5]") (joined
            (portRef (member gpo 26) (instanceRef MSS_ADLIB_INST))
+           (portRef A (instanceRef MSSINT_GPO_5))
           ))
           (net (rename GPO_net_0_6 "GPO_net_0[6]") (joined
            (portRef (member gpo 25) (instanceRef MSS_ADLIB_INST))
+           (portRef A (instanceRef MSSINT_GPO_6))
           ))
           (net (rename GPO_net_0_7 "GPO_net_0[7]") (joined
            (portRef (member gpo 24) (instanceRef MSS_ADLIB_INST))
@@ -2016,13 +2040,45 @@
            (portRef F2M_GPI_1)
            (portRef PAD (instanceRef F2M_GPI_1_pad))
           ))
-          (net M2F_GPO_0_c (joined
-           (portRef Y (instanceRef MSSINT_GPO_0))
-           (portRef D (instanceRef M2F_GPO_0_pad))
+          (net M2F_GPO_2_c (joined
+           (portRef Y (instanceRef MSSINT_GPO_2))
+           (portRef D (instanceRef M2F_GPO_2_pad))
           ))
-          (net M2F_GPO_0 (joined
-           (portRef PAD (instanceRef M2F_GPO_0_pad))
-           (portRef M2F_GPO_0)
+          (net M2F_GPO_2 (joined
+           (portRef PAD (instanceRef M2F_GPO_2_pad))
+           (portRef M2F_GPO_2)
+          ))
+          (net M2F_GPO_3_c (joined
+           (portRef Y (instanceRef MSSINT_GPO_3))
+           (portRef D (instanceRef M2F_GPO_3_pad))
+          ))
+          (net M2F_GPO_3 (joined
+           (portRef PAD (instanceRef M2F_GPO_3_pad))
+           (portRef M2F_GPO_3)
+          ))
+          (net M2F_GPO_4_c (joined
+           (portRef Y (instanceRef MSSINT_GPO_4))
+           (portRef D (instanceRef M2F_GPO_4_pad))
+          ))
+          (net M2F_GPO_4 (joined
+           (portRef PAD (instanceRef M2F_GPO_4_pad))
+           (portRef M2F_GPO_4)
+          ))
+          (net M2F_GPO_5_c (joined
+           (portRef Y (instanceRef MSSINT_GPO_5))
+           (portRef D (instanceRef M2F_GPO_5_pad))
+          ))
+          (net M2F_GPO_5 (joined
+           (portRef PAD (instanceRef M2F_GPO_5_pad))
+           (portRef M2F_GPO_5)
+          ))
+          (net M2F_GPO_6_c (joined
+           (portRef Y (instanceRef MSSINT_GPO_6))
+           (portRef D (instanceRef M2F_GPO_6_pad))
+          ))
+          (net M2F_GPO_6 (joined
+           (portRef PAD (instanceRef M2F_GPO_6_pad))
+           (portRef M2F_GPO_6)
           ))
          )
         (property orig_inst_of (string "audio_mss"))

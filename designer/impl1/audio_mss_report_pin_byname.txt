@@ -1,5 +1,5 @@
 *****************************************************************
-Pin Report - Date: Fri Apr 12 12:42:19 2019 Pinchecksum: NOT-AVAILABLE
+Pin Report - Date: Tue Apr 16 13:08:22 2019 Pinchecksum: NOT-AVAILABLE
 Product: Designer
 Release: v11.9
 Version: 11.9.0.4
@@ -15,7 +15,11 @@ I2C_0_SCL    U21   Yes    I2C_0_SCL/GPIO_23   LVTTL    8                  High  
 I2C_0_SDA    V21   Yes    I2C_0_SDA/GPIO_22   LVTTL    8                  High  None           No               No    35                No           Yes
 I2C_1_SCL    U20   Yes    I2C_1_SCL/GPIO_31   LVTTL    8                  High  None           No               No    35                No           Yes
 I2C_1_SDA    V22   Yes    I2C_1_SDA/GPIO_30   LVTTL    8                  High  None           No               No    35                No           Yes
-M2F_GPO_0    F1    Yes    GFB1/IO65PPB5V0     LVTTL    12                 High  None           ---              No    35                No           No
+M2F_GPO_2    E3    Yes    GFA2/IO68PDB5V0     LVTTL    12                 High  None           ---              No    35                No           No
+M2F_GPO_3    F3    Yes    GFB2/IO68NDB5V0     LVTTL    12                 High  None           ---              No    35                No           No
+M2F_GPO_4    G4    Yes    GFC1/IO66PPB5V0     LVTTL    12                 High  None           ---              No    35                No           No
+M2F_GPO_5    H5    Yes    GFC0/IO66NPB5V0     LVTTL    12                 High  None           ---              No    35                No           No
+M2F_GPO_6    H6    Yes    GFA1/IO64PDB5V0     LVTTL    12                 High  None           ---              No    35                No           No
 MSS_RESET_N  R1    Yes    MSS_RESET_N         LVTTL    ---                ---   None           No               ---   ---               No           Yes
 SDD_1        Y17   Yes    SDD1                LVTTL    ---                ---   ---            ---              ---   ---               No           No
 UART_0_RXD   U18   Yes    UART_0_RXD/GPIO_21  LVTTL    ---                ---   None           No               ---   ---               No           Yes

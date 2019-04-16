@@ -11,19 +11,43 @@
     <hdl-type>Verilog</hdl-type>
     <project-description>
     </project-description>
-    <location>C:/Users/aybasha/Downloads/DigitalSixthSense_audioTest/component/work/audio_mss</location>
-    <state>SAVED ( Fri Apr 12 12:41:09 2019 )</state>
-    <swide-toolchain>SoftConsole workspace generated to C:\Users\aybasha\Downloads\DigitalSixthSense_audioTest\SoftConsole</swide-toolchain>
+    <location>C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/component/work/audio_mss</location>
+    <state>SAVED ( Tue Apr 16 13:01:23 2019 )</state>
+    <swide-toolchain>SoftConsole workspace generated to C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
   </site-map>
   <fileset>
     <name>HDL File(s)</name>
-    <file>C:\Users\aybasha\Downloads\DigitalSixthSense_audioTest\component\work\audio_des\audio_des.v</file>
+    <file>C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\component\work\audio_des\audio_des.v</file>
   </fileset>
   <io>
-    <port-name>UART_1_RXD</port-name>
-    <direction>IN</direction>
+    <port-name>I2C_1_SCL</port-name>
+    <direction>INOUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>I2C_1_SDA</port-name>
+    <direction>INOUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>SDD_1</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>M2F_GPO_5</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>M2F_GPO_6</port-name>
+    <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
@@ -34,13 +58,19 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>I2C_1_SCL</port-name>
-    <direction>INOUT</direction>
+    <port-name>M2F_GPO_4</port-name>
+    <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>M2F_GPO_0</port-name>
+    <port-name>UART_1_RXD</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>M2F_GPO_2</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -58,32 +88,8 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>UART_0_RXD</port-name>
-    <direction>IN</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>I2C_0_SCL</port-name>
-    <direction>INOUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>SDD_1</port-name>
+    <port-name>M2F_GPO_3</port-name>
     <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>UART_0_TXD</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MSS_RESET_N</port-name>
-    <direction>IN</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
@@ -94,7 +100,25 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>I2C_1_SDA</port-name>
+    <port-name>UART_0_RXD</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MSS_RESET_N</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>UART_0_TXD</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>I2C_0_SCL</port-name>
     <direction>INOUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
