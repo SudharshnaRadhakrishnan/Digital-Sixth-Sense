@@ -260,8 +260,8 @@ SIZE="413"
 ENDFILE
 VALUE "<project>\designer\impl1\audio_mss.adb,adb"
 STATE="utd"
-TIME="1555609057"
-SIZE="281600"
+TIME="1555609253"
+SIZE="282624"
 ENDFILE
 VALUE "<project>\designer\impl1\audio_mss.fdb,fdb"
 STATE="utd"
@@ -270,28 +270,28 @@ SIZE="33116"
 ENDFILE
 VALUE "<project>\designer\impl1\audio_mss.ide_des,ide_des"
 STATE="utd"
-TIME="1555609057"
+TIME="1555609253"
 SIZE="1091"
 ENDFILE
 VALUE "<project>\designer\impl1\audio_mss_compile_log.rpt,log"
 STATE="utd"
-TIME="1555609057"
-SIZE="27758"
+TIME="1555609229"
+SIZE="27710"
 ENDFILE
 VALUE "<project>\designer\impl1\audio_mss_fp\audio_mss.pdb,pdb"
 STATE="utd"
-TIME="1555609057"
-SIZE="38906"
+TIME="1555609272"
+SIZE="38909"
 ENDFILE
 VALUE "<project>\designer\impl1\audio_mss_fp\audio_mss.pro,pro"
 STATE="utd"
-TIME="1555609057"
+TIME="1555609310"
 SIZE="2429"
 ENDFILE
 VALUE "<project>\designer\impl1\audio_mss_fp\projectData\audio_mss.pdb,pdb"
 STATE="utd"
-TIME="1555609057"
-SIZE="38906"
+TIME="1555609310"
+SIZE="38909"
 ENDFILE
 VALUE "<project>\designer\impl1\audio_mss_placeroute_log.rpt,log"
 STATE="utd"
@@ -328,22 +328,22 @@ PARENT="<project>\component\work\audio_mss\audio_mss.cxf"
 ENDFILE
 VALUE "<project>\synthesis\audio_mss.edn,syn_edn"
 STATE="utd"
-TIME="1555609057"
-SIZE="105162"
+TIME="1555609221"
+SIZE="105164"
 ENDFILE
 VALUE "<project>\synthesis\audio_mss.so,so"
 STATE="utd"
-TIME="1555609057"
+TIME="1555609221"
 SIZE="235"
 ENDFILE
 VALUE "<project>\synthesis\audio_mss_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1555609057"
+TIME="1555609221"
 SIZE="310"
 ENDFILE
 VALUE "<project>\synthesis\audio_mss_syn.prj,prj"
 STATE="utd"
-TIME="1555609057"
+TIME="1555609222"
 SIZE="2129"
 ENDFILE
 ENDLIST
@@ -465,8 +465,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile

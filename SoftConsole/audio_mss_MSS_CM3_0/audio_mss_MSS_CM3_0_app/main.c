@@ -12,30 +12,15 @@
 
 uint32_t mode = 0; //MODE 0 = all on, MODE 1 = gradual
 
+
 double logcalculator(int pow){
 	return exp(pow) + 30;
 }
 int main()
 {
 	MSS_GPIO_init();
-	//MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_OUTPUT_MODE);
 	MSS_GPIO_config(MSS_GPIO_1, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
-    MSS_GPIO_enable_irq( MSS_GPIO_1);
-
-    MSS_GPIO_config(MSS_GPIO_2, MSS_GPIO_OUTPUT_MODE);
-    MSS_GPIO_config(MSS_GPIO_3, MSS_GPIO_OUTPUT_MODE);
-    MSS_GPIO_config(MSS_GPIO_4, MSS_GPIO_OUTPUT_MODE);
-    MSS_GPIO_config(MSS_GPIO_5, MSS_GPIO_OUTPUT_MODE);
-    MSS_GPIO_config(MSS_GPIO_6, MSS_GPIO_OUTPUT_MODE);
-    MSS_GPIO_set_outputs(~(MSS_GPIO_2_MASK | MSS_GPIO_3_MASK | MSS_GPIO_4_MASK | MSS_GPIO_5_MASK | MSS_GPIO_6_MASK));
-
-
-	/*MSS_GPIO_set_output(MSS_GPIO_2, 1);
-    uint32_t gpio_outputs;
-    gpio_outputs = MSS_GPIO_get_outputs();
-    MSS_GPIO_set_output(MSS_GPIO_2, 0);
-    gpio_outputs = MSS_GPIO_get_outputs();*/
-
+	MSS_GPIO_enable_irq( MSS_GPIO_1);
 	ACE_init();
     /* DAC initialization */
     ACE_configure_sdd(
