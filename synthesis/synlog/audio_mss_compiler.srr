@@ -16,6 +16,7 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\component\work\audio_mss\MSS_CCC_0\audio_mss_tmp_MSS_CCC_0_MSS_CCC.v" (library work)
 @I::"C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\component\work\audio_mss\audio_mss.v" (library work)
 Verilog syntax check successful!
+File C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v changed - recompiling
 File C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\component\work\audio_mss\mss_tshell.v changed - recompiling
 File C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\component\work\audio_mss\MSS_CCC_0\audio_mss_tmp_MSS_CCC_0_MSS_CCC.v changed - recompiling
 File C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\component\work\audio_mss\audio_mss.v changed - recompiling
@@ -70,7 +71,7 @@ At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue Apr 16 13:02:04 2019
+# Thu Apr 18 13:40:19 2019
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q4p1, Build 512R, built Oct 26 2017
@@ -81,7 +82,7 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue Apr 16 13:02:04 2019
+# Thu Apr 18 13:40:19 2019
 
 ###########################################################]
 @END
@@ -91,6 +92,6 @@ At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue Apr 16 13:02:04 2019
+# Thu Apr 18 13:40:19 2019
 
 ###########################################################]

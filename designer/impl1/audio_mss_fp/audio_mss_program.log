@@ -40,7 +40,7 @@ programmer '80258' : Verifying FPGA Array
 programmer '80258' :         Verifying FPGA Array -- pass
 programmer '80258' : Program System Init and Boot Clients...
 programmer '80258' : Verify System Init and Boot Clients...
-programmer '80258' : Finished: Tue Apr 16 15:24:31 2019 (Elapsed time 00:00:35)
+programmer '80258' : Finished: Thu Apr 18 13:41:48 2019 (Elapsed time 00:00:34)
 programmer '80258' : Executing action PROGRAM PASSED.
 
                         o - o - o - o - o - o

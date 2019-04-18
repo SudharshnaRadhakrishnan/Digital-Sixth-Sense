@@ -52,6 +52,7 @@
 #define DRV2605_REG_CONTROL4 0x1E     ///< Control4 Register
 #define DRV2605_REG_VBAT 0x21         ///< Vbat voltage-monitor register
 #define DRV2605_REG_LRARESON 0x22     ///< LRA resonance-period register
+#define TCAADDR 0x70
 
 uint8_t readRegister8(uint8_t reg);
 
@@ -67,5 +68,5 @@ void setMode(uint8_t mode);
 void setRealtimeValue(uint8_t rtp);
 void useERM ();
 void useLRA ();
-
+void tcaselect(uint8_t i);
 #endif

@@ -33,34 +33,33 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Tue Apr 16 13:08:15 2019
+Timing-driven Placer Started: Thu Apr 18 13:40:32 2019
 
-Placer Finished: Tue Apr 16 13:08:16 2019
+Placer Finished: Thu Apr 18 13:40:33 2019
 Total Placer CPU Time:     00:00:01
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: audio_mss                       Started: Tue Apr 16 13:08:17 2019
+Design: audio_mss                       Started: Thu Apr 18 13:40:34 2019
 
  
 
 Timing-driven Router completed successfully.
 
 Design: audio_mss                       
-Finished: Tue Apr 16 13:08:19 2019
+Finished: Thu Apr 18 13:40:36 2019
 Total CPU Time:     00:00:02            Total Elapsed Time: 00:00:02
-Total Memory Usage: 162.2 Mbytes
+Total Memory Usage: 162.1 Mbytes
                         o - o - o - o - o - o
 
-status 257
 Loading the Timing data for the design.
 Finished loading the Timing data.
 TIMER: Max delay timing requirements have been met.
 TIMER: Min delay timing requirements have been met.
 
-The Layout command succeeded ( 00:00:08 )
+The Layout command succeeded ( 00:00:07 )
 Wrote status report to file: audio_mss_place_and_route_report.txt
 
 The Report command succeeded ( 00:00:00 )

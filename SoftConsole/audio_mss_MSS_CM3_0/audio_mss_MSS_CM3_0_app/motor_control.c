@@ -23,8 +23,8 @@
 
 uint8_t readRegister8(uint8_t reg){
 	uint8_t status;
-	MSS_I2C_write( &g_mss_i2c1, DRV2605_ADDR, &reg, 1,
-	                      MSS_I2C_RELEASE_BUS );
+	uint8_t buffer[1] = {reg};
+	MSS_I2C_write( &g_mss_i2c1, DRV2605_ADDR, buffer, 1, MSS_I2C_RELEASE_BUS );
 	status = MSS_I2C_wait_complete( &g_mss_i2c1, MSS_I2C_NO_TIMEOUT );
 	//assert(status == 0);
 	uint8_t ret[1];
@@ -40,7 +40,12 @@ void writeRegister8(uint8_t reg, uint8_t val){
 	uint8_t buffer[2] = {reg, val};
 	MSS_I2C_write( &g_mss_i2c1, DRV2605_ADDR, buffer, 2, MSS_I2C_RELEASE_BUS );
 	status = MSS_I2C_wait_complete( &g_mss_i2c1, MSS_I2C_NO_TIMEOUT );
-	//assert(status == 0);
+}
+
+void tcaselect(uint8_t i) {
+	uint8_t buffer[1] = {i};
+	MSS_I2C_write( &g_mss_i2c1, TCAADDR, buffer, 1, MSS_I2C_RELEASE_BUS );
+	MSS_I2C_wait_complete(&g_mss_i2c1, MSS_I2C_NO_TIMEOUT);
 }
 
 int init() {
@@ -172,5 +177,4 @@ void useLRA () {
 //	  }
 //	  return 0;
 //}
-
 

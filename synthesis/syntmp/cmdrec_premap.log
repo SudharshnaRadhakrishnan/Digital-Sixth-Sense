@@ -1,15 +1,15 @@
 C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\m_proasic.exe  -mp  4  -prjfile  C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\scratchproject.prs  -implementation  synthesis  -prodtype  synplify_pro   -encrypt  -pro  -rundir  C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis   -part A2F200M3F  -package FBGA484  -grade STD    -globalthreshold 50 -maxfan 24 -opcond COMWC -report_path 4000 -RWCheckOnRam 0 -summaryfile C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\synlog\report\audio_mss_premap.xml  -top_level_module  audio_mss  -oedif  C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\audio_mss.edn  -conchk_prepass  C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\audio_mss_cck.rpt   -freq 100.000   C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\synwork\audio_mss_mult.srs  -flow prepass  -gcc_prepass  -osrd  C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\synwork\audio_mss_prem.srd  -qsap  C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\audio_mss.sap  -devicelib  C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\smartfusion.v  -ologparam  C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\syntmp\audio_mss.plg  -osyn  C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\synwork\audio_mss_prem.srd  -prjdir  C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\  -prjname  audio_mss_syn  -log  C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\synlog\audio_mss_premap.srr 
 relcom:..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\m_proasic.exe -mp 4 -prjfile ..\scratchproject.prs -implementation synthesis -prodtype synplify_pro -encrypt -pro -rundir ..\..\synthesis -part A2F200M3F -package FBGA484 -grade STD -globalthreshold 50 -maxfan 24 -opcond COMWC -report_path 4000 -RWCheckOnRam 0 -summaryfile ..\synlog\report\audio_mss_premap.xml -top_level_module audio_mss -oedif ..\audio_mss.edn -conchk_prepass ..\audio_mss_cck.rpt -freq 100.000 ..\synwork\audio_mss_mult.srs -flow prepass -gcc_prepass -osrd ..\synwork\audio_mss_prem.srd -qsap ..\audio_mss.sap -devicelib ..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\smartfusion.v -ologparam audio_mss.plg -osyn ..\synwork\audio_mss_prem.srd -prjdir ..\ -prjname audio_mss_syn -log ..\synlog\audio_mss_premap.srr
 rc:0 success:1 runtime:1
-file:..\scratchproject.prs|io:o|time:1555433327|size:2190|exec:0|csum:
-file:..\audio_mss.edn|io:o|time:1555433329|size:102872|exec:0|csum:
-file:..\audio_mss_cck.rpt|io:o|time:1555434126|size:23829|exec:0|csum:
-file:..\synwork\audio_mss_mult.srs|io:i|time:1555434125|size:23055|exec:0|csum:BD361DD290B0C6314229E94F171C33B3
-file:..\synwork\audio_mss_prem.srd|io:o|time:1555434126|size:11552|exec:0|csum:
-file:..\audio_mss.sap|io:o|time:1555434126|size:117|exec:0|csum:
+file:..\scratchproject.prs|io:o|time:1555609057|size:2190|exec:0|csum:
+file:..\audio_mss.edn|io:o|time:1555609057|size:105162|exec:0|csum:
+file:..\audio_mss_cck.rpt|io:o|time:1555609221|size:23829|exec:0|csum:
+file:..\synwork\audio_mss_mult.srs|io:i|time:1555609220|size:23050|exec:0|csum:47E9D08B93D0B9DA70D54D8C41674153
+file:..\synwork\audio_mss_prem.srd|io:o|time:1555609221|size:11556|exec:0|csum:
+file:..\audio_mss.sap|io:o|time:1555609221|size:117|exec:0|csum:
 file:..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\smartfusion.v|io:i|time:1509027488|size:72817|exec:0|csum:792D908376FAE59463CBCC67F19D1698
-file:audio_mss.plg|io:o|time:1555434126|size:0|exec:0|csum:
-file:..\synwork\audio_mss_prem.srd|io:o|time:1555434126|size:11552|exec:0|csum:
-file:..\synlog\audio_mss_premap.srr|io:o|time:1555434126|size:3495|exec:0|csum:
+file:audio_mss.plg|io:o|time:1555609220|size:0|exec:0|csum:
+file:..\synwork\audio_mss_prem.srd|io:o|time:1555609221|size:11556|exec:0|csum:
+file:..\synlog\audio_mss_premap.srr|io:o|time:1555609221|size:3495|exec:0|csum:
 file:..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\m_proasic.exe|io:i|time:1509373872|size:11119104|exec:1|csum:6BD6E9876645BB1B346C655471A0D71C
 file:..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\m_proasic.exe|io:i|time:1509375286|size:14301696|exec:1|csum:CA7B630F1194A591FA1E520688EE75E2

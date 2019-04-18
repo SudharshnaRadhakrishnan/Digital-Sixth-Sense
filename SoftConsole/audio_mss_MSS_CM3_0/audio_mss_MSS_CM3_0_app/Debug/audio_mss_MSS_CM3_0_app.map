@@ -477,7 +477,7 @@ END GROUP
                 0x20010000                PROVIDE (_estack, __main_stack_start)
                 0x00000000                PROVIDE (__mirrored_nvm, 0x0)
 
-.text           0x20000000     0x3d70
+.text           0x20000000     0x3df8
  CREATE_OBJECT_SYMBOLS
                 0x20000000                __text_load = LOADADDR (.text)
                 0x20000000                __text_start = .
@@ -609,286 +609,289 @@ END GROUP
  .text.logcalculator
                 0x200004c0       0x44 ./main.o
                 0x200004c0                logcalculator
- .text.main     0x20000504      0x288 ./main.o
+ .text.main     0x20000504      0x2c4 ./main.o
                 0x20000504                main
  .text.GPIO1_IRQHandler
-                0x2000078c       0xb0 ./main.o
-                0x2000078c                GPIO1_IRQHandler
+                0x200007c8       0xb0 ./main.o
+                0x200007c8                GPIO1_IRQHandler
  .text.readRegister8
-                0x2000083c       0x80 ./motor_control.o
-                0x2000083c                readRegister8
+                0x20000878       0x84 ./motor_control.o
+                0x20000878                readRegister8
  .text.writeRegister8
-                0x200008bc       0x54 ./motor_control.o
-                0x200008bc                writeRegister8
- .text.init     0x20000910       0xb4 ./motor_control.o
-                0x20000910                init
+                0x200008fc       0x54 ./motor_control.o
+                0x200008fc                writeRegister8
+ .text.tcaselect
+                0x20000950       0x48 ./motor_control.o
+                0x20000950                tcaselect
+ .text.init     0x20000998       0xb4 ./motor_control.o
+                0x20000998                init
  .text.setWaveform
-                0x200009c4       0x28 ./motor_control.o
-                0x200009c4                setWaveform
+                0x20000a4c       0x28 ./motor_control.o
+                0x20000a4c                setWaveform
  .text.selectLibrary
-                0x200009ec       0x20 ./motor_control.o
-                0x200009ec                selectLibrary
- .text.go       0x20000a0c       0x14 ./motor_control.o
-                0x20000a0c                go
- .text.setMode  0x20000a20       0x20 ./motor_control.o
-                0x20000a20                setMode
- .text.measure  0x20000a40       0xf0 ./tfmini.o
-                0x20000a40                measure
+                0x20000a74       0x20 ./motor_control.o
+                0x20000a74                selectLibrary
+ .text.go       0x20000a94       0x14 ./motor_control.o
+                0x20000a94                go
+ .text.setMode  0x20000aa8       0x20 ./motor_control.o
+                0x20000aa8                setMode
+ .text.measure  0x20000ac8       0xf0 ./tfmini.o
+                0x20000ac8                measure
  .text.NVIC_ClearPendingIRQ
-                0x20000b30       0x3c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x20000bb8       0x3c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
  .text.MSS_UART_init
-                0x20000b6c      0x204 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
-                0x20000b6c                MSS_UART_init
+                0x20000bf4      0x204 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x20000bf4                MSS_UART_init
  .text.MSS_UART_polled_tx
-                0x20000d70       0xe4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
-                0x20000d70                MSS_UART_polled_tx
+                0x20000df8       0xe4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x20000df8                MSS_UART_polled_tx
  .text.MSS_UART_get_rx
-                0x20000e54       0xdc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
-                0x20000e54                MSS_UART_get_rx
+                0x20000edc       0xdc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x20000edc                MSS_UART_get_rx
  .text.MSS_UART_isr
-                0x20000f30      0x11c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x20000fb8      0x11c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
  .text.default_tx_handler
-                0x2000104c      0x108 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x200010d4      0x108 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
  .text.UART0_IRQHandler
-                0x20001154       0x2c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
-                0x20001154                UART0_IRQHandler
+                0x200011dc       0x2c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x200011dc                UART0_IRQHandler
  .text.UART1_IRQHandler
-                0x20001180       0x2c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
-                0x20001180                UART1_IRQHandler
+                0x20001208       0x2c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x20001208                UART1_IRQHandler
  .text.NVIC_EnableIRQ
-                0x200011ac       0x38 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x20001234       0x38 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
  .text.NVIC_DisableIRQ
-                0x200011e4       0x3c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x2000126c       0x3c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
  .text.NVIC_ClearPendingIRQ
-                0x20001220       0x3c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x200012a8       0x3c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
  .text.MSS_I2C_init
-                0x2000125c      0x16c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
-                0x2000125c                MSS_I2C_init
+                0x200012e4      0x16c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x200012e4                MSS_I2C_init
  .text.MSS_I2C_write
-                0x200013c8       0xf4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
-                0x200013c8                MSS_I2C_write
+                0x20001450       0xf4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x20001450                MSS_I2C_write
  .text.MSS_I2C_read
-                0x200014bc       0xf4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
-                0x200014bc                MSS_I2C_read
+                0x20001544       0xf4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x20001544                MSS_I2C_read
  .text.MSS_I2C_wait_complete
-                0x200015b0       0x4c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
-                0x200015b0                MSS_I2C_wait_complete
+                0x20001638       0x4c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x20001638                MSS_I2C_wait_complete
  .text.enable_slave_if_required
-                0x200015fc       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x20001684       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
  .text.mss_i2c_isr
-                0x20001624      0x8f4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x200016ac      0x8f4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
  .text.disable_interrupts
-                0x20001f18       0x24 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x20001fa0       0x24 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
  .text.restore_interrupts
-                0x20001f3c       0x18 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x20001fc4       0x18 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
  .text.I2C0_IRQHandler
-                0x20001f54       0x2c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
-                0x20001f54                I2C0_IRQHandler
+                0x20001fdc       0x2c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x20001fdc                I2C0_IRQHandler
  .text.I2C1_IRQHandler
-                0x20001f80       0x2c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
-                0x20001f80                I2C1_IRQHandler
+                0x20002008       0x2c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x20002008                I2C1_IRQHandler
  .text.NVIC_EnableIRQ
-                0x20001fac       0x38 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x20002034       0x38 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
  .text.NVIC_ClearPendingIRQ
-                0x20001fe4       0x3c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x2000206c       0x3c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
  .text.MSS_GPIO_init
-                0x20002020       0x6c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
-                0x20002020                MSS_GPIO_init
+                0x200020a8       0x6c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x200020a8                MSS_GPIO_init
  .text.MSS_GPIO_config
-                0x2000208c       0x3c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
-                0x2000208c                MSS_GPIO_config
+                0x20002114       0x3c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x20002114                MSS_GPIO_config
  .text.MSS_GPIO_enable_irq
-                0x200020c8       0x64 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
-                0x200020c8                MSS_GPIO_enable_irq
+                0x20002150       0x64 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x20002150                MSS_GPIO_enable_irq
  .text.MSS_GPIO_clear_irq
-                0x2000212c       0x50 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
-                0x2000212c                MSS_GPIO_clear_irq
+                0x200021b4       0x50 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x200021b4                MSS_GPIO_clear_irq
  .text.ACE_init
-                0x2000217c       0x10 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
-                0x2000217c                ACE_init
+                0x20002204       0x10 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+                0x20002204                ACE_init
  .text.ACE_configure_sdd
-                0x2000218c      0x1a0 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
-                0x2000218c                ACE_configure_sdd
+                0x20002214      0x1a0 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+                0x20002214                ACE_configure_sdd
  .text.ACE_enable_sdd
-                0x2000232c       0x48 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
-                0x2000232c                ACE_enable_sdd
+                0x200023b4       0x48 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+                0x200023b4                ACE_enable_sdd
  .text.ACE_set_sdd_value
-                0x20002374       0x4c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
-                0x20002374                ACE_set_sdd_value
+                0x200023fc       0x4c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+                0x200023fc                ACE_set_sdd_value
  .text.__get_PRIMASK
-                0x200023c0       0x20 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
-                0x200023c0                __get_PRIMASK
+                0x20002448       0x20 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
+                0x20002448                __get_PRIMASK
  .text.__set_PRIMASK
-                0x200023e0       0x18 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
-                0x200023e0                __set_PRIMASK
+                0x20002468       0x18 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
+                0x20002468                __set_PRIMASK
  .text.SystemInit
-                0x200023f8        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x200023f8                SystemInit
+                0x20002480        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x20002480                SystemInit
  .text.SystemCoreClockUpdate
-                0x20002404      0x150 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x20002404                SystemCoreClockUpdate
+                0x2000248c      0x150 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x2000248c                SystemCoreClockUpdate
  .text.GetSystemClock
-                0x20002554       0xe8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x200025dc       0xe8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
  .text.ace_init_convert
-                0x2000263c      0x1b4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
-                0x2000263c                ace_init_convert
+                0x200026c4      0x1b4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+                0x200026c4                ace_init_convert
  .text.NVIC_ClearPendingIRQ
-                0x200027f0       0x3c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002878       0x3c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
  .text.ace_init_flags
-                0x2000282c        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x2000282c                ace_init_flags
+                0x200028b4        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x200028b4                ace_init_flags
  .text.process_flag_irq
-                0x20002838       0x14 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x200028c0       0x14 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
  .text.ACE_PPE_Flag0_IRQHandler
-                0x2000284c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x2000284c                ACE_PPE_Flag0_IRQHandler
+                0x200028d4       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x200028d4                ACE_PPE_Flag0_IRQHandler
  .text.ACE_PPE_Flag1_IRQHandler
-                0x20002874       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002874                ACE_PPE_Flag1_IRQHandler
+                0x200028fc       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x200028fc                ACE_PPE_Flag1_IRQHandler
  .text.ACE_PPE_Flag2_IRQHandler
-                0x2000289c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x2000289c                ACE_PPE_Flag2_IRQHandler
+                0x20002924       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002924                ACE_PPE_Flag2_IRQHandler
  .text.ACE_PPE_Flag3_IRQHandler
-                0x200028c4       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x200028c4                ACE_PPE_Flag3_IRQHandler
+                0x2000294c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x2000294c                ACE_PPE_Flag3_IRQHandler
  .text.ACE_PPE_Flag4_IRQHandler
-                0x200028ec       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x200028ec                ACE_PPE_Flag4_IRQHandler
+                0x20002974       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002974                ACE_PPE_Flag4_IRQHandler
  .text.ACE_PPE_Flag5_IRQHandler
-                0x20002914       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002914                ACE_PPE_Flag5_IRQHandler
+                0x2000299c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x2000299c                ACE_PPE_Flag5_IRQHandler
  .text.ACE_PPE_Flag6_IRQHandler
-                0x2000293c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x2000293c                ACE_PPE_Flag6_IRQHandler
+                0x200029c4       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x200029c4                ACE_PPE_Flag6_IRQHandler
  .text.ACE_PPE_Flag7_IRQHandler
-                0x20002964       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002964                ACE_PPE_Flag7_IRQHandler
+                0x200029ec       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x200029ec                ACE_PPE_Flag7_IRQHandler
  .text.ACE_PPE_Flag8_IRQHandler
-                0x2000298c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x2000298c                ACE_PPE_Flag8_IRQHandler
+                0x20002a14       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002a14                ACE_PPE_Flag8_IRQHandler
  .text.ACE_PPE_Flag9_IRQHandler
-                0x200029b4       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x200029b4                ACE_PPE_Flag9_IRQHandler
+                0x20002a3c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002a3c                ACE_PPE_Flag9_IRQHandler
  .text.ACE_PPE_Flag10_IRQHandler
-                0x200029dc       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x200029dc                ACE_PPE_Flag10_IRQHandler
+                0x20002a64       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002a64                ACE_PPE_Flag10_IRQHandler
  .text.ACE_PPE_Flag11_IRQHandler
-                0x20002a04       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002a04                ACE_PPE_Flag11_IRQHandler
+                0x20002a8c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002a8c                ACE_PPE_Flag11_IRQHandler
  .text.ACE_PPE_Flag12_IRQHandler
-                0x20002a2c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002a2c                ACE_PPE_Flag12_IRQHandler
+                0x20002ab4       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002ab4                ACE_PPE_Flag12_IRQHandler
  .text.ACE_PPE_Flag13_IRQHandler
-                0x20002a54       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002a54                ACE_PPE_Flag13_IRQHandler
+                0x20002adc       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002adc                ACE_PPE_Flag13_IRQHandler
  .text.ACE_PPE_Flag14_IRQHandler
-                0x20002a7c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002a7c                ACE_PPE_Flag14_IRQHandler
+                0x20002b04       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002b04                ACE_PPE_Flag14_IRQHandler
  .text.ACE_PPE_Flag15_IRQHandler
-                0x20002aa4       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002aa4                ACE_PPE_Flag15_IRQHandler
+                0x20002b2c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002b2c                ACE_PPE_Flag15_IRQHandler
  .text.ACE_PPE_Flag16_IRQHandler
-                0x20002acc       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002acc                ACE_PPE_Flag16_IRQHandler
+                0x20002b54       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002b54                ACE_PPE_Flag16_IRQHandler
  .text.ACE_PPE_Flag17_IRQHandler
-                0x20002af4       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002af4                ACE_PPE_Flag17_IRQHandler
+                0x20002b7c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002b7c                ACE_PPE_Flag17_IRQHandler
  .text.ACE_PPE_Flag18_IRQHandler
-                0x20002b1c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002b1c                ACE_PPE_Flag18_IRQHandler
+                0x20002ba4       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002ba4                ACE_PPE_Flag18_IRQHandler
  .text.ACE_PPE_Flag19_IRQHandler
-                0x20002b44       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002b44                ACE_PPE_Flag19_IRQHandler
+                0x20002bcc       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002bcc                ACE_PPE_Flag19_IRQHandler
  .text.ACE_PPE_Flag20_IRQHandler
-                0x20002b6c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002b6c                ACE_PPE_Flag20_IRQHandler
+                0x20002bf4       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002bf4                ACE_PPE_Flag20_IRQHandler
  .text.ACE_PPE_Flag21_IRQHandler
-                0x20002b94       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002b94                ACE_PPE_Flag21_IRQHandler
+                0x20002c1c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002c1c                ACE_PPE_Flag21_IRQHandler
  .text.ACE_PPE_Flag22_IRQHandler
-                0x20002bbc       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002bbc                ACE_PPE_Flag22_IRQHandler
+                0x20002c44       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002c44                ACE_PPE_Flag22_IRQHandler
  .text.ACE_PPE_Flag23_IRQHandler
-                0x20002be4       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002be4                ACE_PPE_Flag23_IRQHandler
+                0x20002c6c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002c6c                ACE_PPE_Flag23_IRQHandler
  .text.ACE_PPE_Flag24_IRQHandler
-                0x20002c0c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002c0c                ACE_PPE_Flag24_IRQHandler
+                0x20002c94       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002c94                ACE_PPE_Flag24_IRQHandler
  .text.ACE_PPE_Flag25_IRQHandler
-                0x20002c34       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002c34                ACE_PPE_Flag25_IRQHandler
+                0x20002cbc       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002cbc                ACE_PPE_Flag25_IRQHandler
  .text.ACE_PPE_Flag26_IRQHandler
-                0x20002c5c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002c5c                ACE_PPE_Flag26_IRQHandler
+                0x20002ce4       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002ce4                ACE_PPE_Flag26_IRQHandler
  .text.ACE_PPE_Flag27_IRQHandler
-                0x20002c84       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002c84                ACE_PPE_Flag27_IRQHandler
+                0x20002d0c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002d0c                ACE_PPE_Flag27_IRQHandler
  .text.ACE_PPE_Flag28_IRQHandler
-                0x20002cac       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002cac                ACE_PPE_Flag28_IRQHandler
+                0x20002d34       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002d34                ACE_PPE_Flag28_IRQHandler
  .text.ACE_PPE_Flag29_IRQHandler
-                0x20002cd4       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002cd4                ACE_PPE_Flag29_IRQHandler
+                0x20002d5c       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002d5c                ACE_PPE_Flag29_IRQHandler
  .text.ACE_PPE_Flag30_IRQHandler
-                0x20002cfc       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002cfc                ACE_PPE_Flag30_IRQHandler
+                0x20002d84       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002d84                ACE_PPE_Flag30_IRQHandler
  .text.ACE_PPE_Flag31_IRQHandler
-                0x20002d24       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
-                0x20002d24                ACE_PPE_Flag31_IRQHandler
- .text          0x20002d4c      0x370 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubdf3.o)
-                0x20002d4c                __aeabi_drsub
-                0x20002d54                __aeabi_dsub
-                0x20002d54                __subdf3
-                0x20002d58                __aeabi_dadd
-                0x20002d58                __adddf3
-                0x20002fd0                __floatunsidf
-                0x20002fd0                __aeabi_ui2d
-                0x20002ff0                __floatsidf
-                0x20002ff0                __aeabi_i2d
-                0x20003014                __aeabi_f2d
-                0x20003014                __extendsfdf2
-                0x20003050                __floatundidf
-                0x20003050                __aeabi_ul2d
-                0x20003060                __floatdidf
-                0x20003060                __aeabi_l2d
- .text          0x200030bc      0x424 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_muldivdf3.o)
-                0x200030bc                __aeabi_dmul
-                0x200030bc                __muldf3
-                0x20003310                __divdf3
-                0x20003310                __aeabi_ddiv
- .text          0x200034e0      0x110 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_cmpdf2.o)
-                0x200034e0                __gtdf2
-                0x200034e0                __gedf2
-                0x200034e8                __ltdf2
-                0x200034e8                __ledf2
-                0x200034f0                __nedf2
-                0x200034f0                __eqdf2
-                0x200034f0                __cmpdf2
-                0x2000356c                __aeabi_cdrcmple
-                0x2000357c                __aeabi_cdcmpeq
-                0x2000357c                __aeabi_cdcmple
-                0x2000358c                __aeabi_dcmpeq
-                0x200035a0                __aeabi_dcmplt
-                0x200035b4                __aeabi_dcmple
-                0x200035c8                __aeabi_dcmpge
-                0x200035dc                __aeabi_dcmpgt
- .text          0x200035f0        0xc c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
-                0x200035f0                __errno
- .text          0x200035fc       0x50 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
-                0x200035fc                __libc_init_array
- .text          0x2000364c       0xd4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
-                0x2000364c                memset
- .text          0x20003720      0x100 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-w_exp.o)
-                0x20003720                exp
- .text          0x20003820      0x318 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-e_exp.o)
-                0x20003820                __ieee754_exp
- .text          0x20003b38       0x10 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_finite.o)
-                0x20003b38                finite
- .text          0x20003b48        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_matherr.o)
-                0x20003b48                matherr
- .text          0x20003b4c       0x50 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_fixdfsi.o)
-                0x20003b4c                __aeabi_d2iz
-                0x20003b4c                __fixdfsi
+                0x20002dac       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x20002dac                ACE_PPE_Flag31_IRQHandler
+ .text          0x20002dd4      0x370 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubdf3.o)
+                0x20002dd4                __aeabi_drsub
+                0x20002ddc                __aeabi_dsub
+                0x20002ddc                __subdf3
+                0x20002de0                __aeabi_dadd
+                0x20002de0                __adddf3
+                0x20003058                __floatunsidf
+                0x20003058                __aeabi_ui2d
+                0x20003078                __floatsidf
+                0x20003078                __aeabi_i2d
+                0x2000309c                __aeabi_f2d
+                0x2000309c                __extendsfdf2
+                0x200030d8                __floatundidf
+                0x200030d8                __aeabi_ul2d
+                0x200030e8                __floatdidf
+                0x200030e8                __aeabi_l2d
+ .text          0x20003144      0x424 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_muldivdf3.o)
+                0x20003144                __aeabi_dmul
+                0x20003144                __muldf3
+                0x20003398                __divdf3
+                0x20003398                __aeabi_ddiv
+ .text          0x20003568      0x110 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_cmpdf2.o)
+                0x20003568                __gtdf2
+                0x20003568                __gedf2
+                0x20003570                __ltdf2
+                0x20003570                __ledf2
+                0x20003578                __nedf2
+                0x20003578                __eqdf2
+                0x20003578                __cmpdf2
+                0x200035f4                __aeabi_cdrcmple
+                0x20003604                __aeabi_cdcmpeq
+                0x20003604                __aeabi_cdcmple
+                0x20003614                __aeabi_dcmpeq
+                0x20003628                __aeabi_dcmplt
+                0x2000363c                __aeabi_dcmple
+                0x20003650                __aeabi_dcmpge
+                0x20003664                __aeabi_dcmpgt
+ .text          0x20003678        0xc c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+                0x20003678                __errno
+ .text          0x20003684       0x50 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                0x20003684                __libc_init_array
+ .text          0x200036d4       0xd4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                0x200036d4                memset
+ .text          0x200037a8      0x100 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-w_exp.o)
+                0x200037a8                exp
+ .text          0x200038a8      0x318 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-e_exp.o)
+                0x200038a8                __ieee754_exp
+ .text          0x20003bc0       0x10 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_finite.o)
+                0x20003bc0                finite
+ .text          0x20003bd0        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_matherr.o)
+                0x20003bd0                matherr
+ .text          0x20003bd4       0x50 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_fixdfsi.o)
+                0x20003bd4                __aeabi_d2iz
+                0x20003bd4                __fixdfsi
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -897,7 +900,7 @@ END GROUP
  .glue_7        0x00000000        0x0 linker stubs
  *(.vfp11_veneer)
  .vfp11_veneer  0x00000000        0x0 linker stubs
-                0x20003b9c                . = ALIGN (0x4)
+                0x20003c24                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
@@ -908,153 +911,153 @@ END GROUP
  *crtend.o(.dtors)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.C.18.2663
-                0x20003b9c        0x8 ./tfmini.o
+                0x20003c24        0x8 ./tfmini.o
  .rodata.g_config_reg_lut
-                0x20003ba4       0x80 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x20003c2c       0x80 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
  .rodata.g_gpio_irqn_lut
-                0x20003c24       0x40 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x20003cac       0x40 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
  .rodata.dac_ctrl_reg_lut
-                0x20003c64        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+                0x20003cec        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
  .rodata.dac_enable_masks_lut
-                0x20003c70        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+                0x20003cf8        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
  .rodata.dac_byte01_reg_lut
-                0x20003c7c        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+                0x20003d04        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
  .rodata.dac_byte2_reg_lut
-                0x20003c88        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+                0x20003d10        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
  .rodata.p_mtd_data
-                0x20003c94        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+                0x20003d1c        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
  .rodata.C.18.3510
-                0x20003c98        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+                0x20003d20        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
  .rodata.C.18.2576
-                0x20003c9c       0x10 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x20003d24       0x10 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
  .rodata.g_ace_channel_0_name
-                0x20003cac        0x8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
-                0x20003cac                g_ace_channel_0_name
+                0x20003d34        0x8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
+                0x20003d34                g_ace_channel_0_name
  .rodata.channel_type_lut
-                0x20003cb4       0x30 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+                0x20003d3c       0x30 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
  .rodata.channel_quad_lut
-                0x20003ce4       0x30 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+                0x20003d6c       0x30 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
  .rodata.str1.4
-                0x20003d14        0x2 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+                0x20003d9c        0x2 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
                                   0x4 (size before relaxing)
- *fill*         0x20003d16        0x2 00
+ *fill*         0x20003d9e        0x2 00
  .rodata.str1.4
-                0x20003d18        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-w_exp.o)
- *fill*         0x20003d1c        0x4 00
- .rodata        0x20003d20       0x30 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-e_exp.o)
+                0x20003da0        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-w_exp.o)
+ *fill*         0x20003da4        0x4 00
+ .rodata        0x20003da8       0x30 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-e_exp.o)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
  *(.eh_frame_hdr)
  *(.eh_frame)
  *(.init)
- .init          0x20003d50        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
-                0x20003d50                _init
- .init          0x20003d54        0x8 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .init          0x20003dd8        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x20003dd8                _init
+ .init          0x20003ddc        0x8 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
  *(.fini)
- .fini          0x20003d5c        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
-                0x20003d5c                _fini
- .fini          0x20003d60        0x8 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
-                0x20003d68                PROVIDE (__preinit_array_start, .)
+ .fini          0x20003de4        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x20003de4                _fini
+ .fini          0x20003de8        0x8 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+                0x20003df0                PROVIDE (__preinit_array_start, .)
  *(.preinit_array)
-                0x20003d68                PROVIDE (__preinit_array_end, .)
-                0x20003d68                PROVIDE (__init_array_start, .)
+                0x20003df0                PROVIDE (__preinit_array_end, .)
+                0x20003df0                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x20003d68        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
-                0x20003d6c                PROVIDE (__init_array_end, .)
-                0x20003d6c                PROVIDE (__fini_array_start, .)
+ .init_array    0x20003df0        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+                0x20003df4                PROVIDE (__init_array_end, .)
+                0x20003df4                PROVIDE (__fini_array_start, .)
  *(.fini_array)
- .fini_array    0x20003d6c        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .fini_array    0x20003df4        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
  *(SORT(.fini_array.*))
-                0x20003d70                PROVIDE (__fini_array_end, .)
-                0x20003d70                __exidx_start = .
+                0x20003df8                PROVIDE (__fini_array_end, .)
+                0x20003df8                __exidx_start = .
 
-.v4_bx          0x20003d70        0x0
+.v4_bx          0x20003df8        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x20003d70                __exidx_end = .
-                0x20003d70                _etext = .
-                0x20003d70                PROVIDE (__text_end, .)
+                0x20003df8                __exidx_end = .
+                0x20003df8                _etext = .
+                0x20003df8                PROVIDE (__text_end, .)
 
-.data           0x20003d70      0x124
-                0x20003d70                __data_load = LOADADDR (.data)
-                0x20003d70                _sidata = LOADADDR (.data)
-                0x20003d70                __data_start = .
-                0x20003d70                _sdata = .
+.data           0x20003df8      0x124
+                0x20003df8                __data_load = LOADADDR (.data)
+                0x20003df8                _sidata = LOADADDR (.data)
+                0x20003df8                __data_start = .
+                0x20003df8                _sdata = .
  *(.jcr)
- .jcr           0x20003d70        0x0 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
- .jcr           0x20003d70        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .jcr           0x20003df8        0x0 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .jcr           0x20003df8        0x4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
  *(.got.plt)
  *(.got)
  *(.shdata)
  *(.data .data.* .gnu.linkonce.d.*)
  .data.SystemFrequency
-                0x20003d74        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x20003d74                SystemFrequency
+                0x20003dfc        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x20003dfc                SystemFrequency
  .data.SystemCoreClock
-                0x20003d78        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x20003d78                SystemCoreClock
+                0x20003e00        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x20003e00                SystemCoreClock
  .data.g_FrequencyPCLK0
-                0x20003d7c        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x20003d7c                g_FrequencyPCLK0
+                0x20003e04        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x20003e04                g_FrequencyPCLK0
  .data.g_FrequencyPCLK1
-                0x20003d80        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x20003d80                g_FrequencyPCLK1
+                0x20003e08        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x20003e08                g_FrequencyPCLK1
  .data.g_FrequencyACE
-                0x20003d84        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x20003d84                g_FrequencyACE
+                0x20003e0c        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x20003e0c                g_FrequencyACE
  .data.g_FrequencyFPGA
-                0x20003d88        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x20003d88                g_FrequencyFPGA
+                0x20003e10        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x20003e10                g_FrequencyFPGA
  .data.g_ace_channel_desc_table
-                0x20003d8c       0x10 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
-                0x20003d8c                g_ace_channel_desc_table
- .data          0x20003d9c       0xf4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
-                0x20003d9c                _impure_ptr
- .data          0x20003e90        0x1 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_lib_ver.o)
-                0x20003e90                __fdlib_version
-                0x20003e94                . = ALIGN (0x4)
- *fill*         0x20003e91        0x3 00
-                0x20003e94                _edata = .
+                0x20003e14       0x10 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
+                0x20003e14                g_ace_channel_desc_table
+ .data          0x20003e24       0xf4 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+                0x20003e24                _impure_ptr
+ .data          0x20003f18        0x1 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_lib_ver.o)
+                0x20003f18                __fdlib_version
+                0x20003f1c                . = ALIGN (0x4)
+ *fill*         0x20003f19        0x3 00
+                0x20003f1c                _edata = .
 
-.bss            0x20003e94      0x154
-                0x20003e94                __bss_start__ = .
-                0x20003e94                _sbss = .
+.bss            0x20003f1c      0x154
+                0x20003f1c                __bss_start__ = .
+                0x20003f1c                _sbss = .
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x20003e94        0x1 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
- *fill*         0x20003e95        0x3 00
- .bss.mode      0x20003e98        0x4 ./main.o
-                0x20003e98                mode
+ .bss           0x20003f1c        0x1 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ *fill*         0x20003f1d        0x3 00
+ .bss.mode      0x20003f20        0x4 ./main.o
+                0x20003f20                mode
  .bss.g_gdec_lut
-                0x20003e9c        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+                0x20003f24        0xc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
  .bss.channel_type_lut_h
-                0x20003ea8        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+                0x20003f30        0x4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
  *(COMMON)
- COMMON         0x20003eac       0x50 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
-                0x20003eac                g_mss_uart1
-                0x20003ed4                g_mss_uart0
- COMMON         0x20003efc       0xe8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
-                0x20003efc                g_mss_i2c0
-                0x20003f70                g_mss_i2c1
-                0x20003fe8                . = ALIGN (0x8)
- *fill*         0x20003fe4        0x4 00
-                0x20003fe8                __bss_end__ = .
-                0x20003fe8                _end = .
-                0x20003fe8                __end = _end
-                0x20003fe8                _ebss = .
-                0x20003fe8                PROVIDE (end, .)
+ COMMON         0x20003f34       0x50 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x20003f34                g_mss_uart1
+                0x20003f5c                g_mss_uart0
+ COMMON         0x20003f84       0xe8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x20003f84                g_mss_i2c0
+                0x20003ff8                g_mss_i2c1
+                0x20004070                . = ALIGN (0x8)
+ *fill*         0x2000406c        0x4 00
+                0x20004070                __bss_end__ = .
+                0x20004070                _end = .
+                0x20004070                __end = _end
+                0x20004070                _ebss = .
+                0x20004070                PROVIDE (end, .)
 
-.stack          0x20003fe8     0x3000
-                0x20003fe8                . = ALIGN (0x4)
-                0x20004fe8                . = (. + PROCESS_STACK_SIZE)
- *fill*         0x20003fe8     0x1000 00
-                0x20004fe8                . = ALIGN (0x4)
-                0x20006fe8                . = (. + MAIN_STACK_SIZE)
- *fill*         0x20004fe8     0x2000 00
-                0x20006fe8                . = ALIGN (0x4)
+.stack          0x20004070     0x3000
+                0x20004070                . = ALIGN (0x4)
+                0x20005070                . = (. + PROCESS_STACK_SIZE)
+ *fill*         0x20004070     0x1000 00
+                0x20005070                . = ALIGN (0x4)
+                0x20007070                . = (. + MAIN_STACK_SIZE)
+ *fill*         0x20005070     0x2000 00
+                0x20007070                . = ALIGN (0x4)
 
 .stab
  *(.stab)
@@ -1089,78 +1092,78 @@ END GROUP
  .comment       0x000001d9       0x2b C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
  .comment       0x00000204       0x2b C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
 
-.debug_aranges  0x00000000      0x848
+.debug_aranges  0x00000000      0x850
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x38 ./main.o
  .debug_aranges
-                0x00000038       0x70 ./motor_control.o
+                0x00000038       0x78 ./motor_control.o
  .debug_aranges
-                0x000000a8       0x28 ./tfmini.o
+                0x000000b0       0x28 ./tfmini.o
  .debug_aranges
-                0x000000d0       0xa8 C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x000000d8       0xa8 C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
  .debug_aranges
-                0x00000178       0xd8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x00000180       0xd8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
  .debug_aranges
-                0x00000250      0x128 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x00000258      0x128 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
  .debug_aranges
-                0x00000378       0x60 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x00000380       0x60 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
  .debug_aranges
-                0x000003d8       0xe0 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+                0x000003e0       0xe0 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
  .debug_aranges
-                0x000004b8       0xc8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
+                0x000004c0       0xc8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
  .debug_aranges
-                0x00000580       0x30 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x00000588       0x30 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
  .debug_aranges
-                0x000005b0       0xb0 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+                0x000005b8       0xb0 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
  .debug_aranges
-                0x00000660      0x1e8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x00000668      0x1e8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
 
 .debug_pubnames
-                0x00000000     0x15f1
+                0x00000000     0x15ff
  *(.debug_pubnames)
  .debug_pubnames
                 0x00000000       0x4b ./main.o
  .debug_pubnames
-                0x0000004b       0xa9 ./motor_control.o
+                0x0000004b       0xb7 ./motor_control.o
  .debug_pubnames
-                0x000000f4       0x26 ./tfmini.o
+                0x00000102       0x26 ./tfmini.o
  .debug_pubnames
-                0x0000011a       0xeb C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x00000128       0xeb C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
  .debug_pubnames
-                0x00000205      0x21c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x00000213      0x21c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
  .debug_pubnames
-                0x00000421      0x2eb C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x0000042f      0x2eb C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
  .debug_pubnames
-                0x0000070c       0xb1 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x0000071a       0xb1 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
  .debug_pubnames
-                0x000007bd      0x292 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+                0x000007cb      0x292 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
  .debug_pubnames
-                0x00000a4f      0x159 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
+                0x00000a5d      0x159 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
  .debug_pubnames
-                0x00000ba8       0xb4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x00000bb6       0xb4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
  .debug_pubnames
-                0x00000c5c      0x14a C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
+                0x00000c6a      0x14a C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
  .debug_pubnames
-                0x00000da6      0x1ec C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+                0x00000db4      0x1ec C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
  .debug_pubnames
-                0x00000f92      0x65f C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x00000fa0      0x65f C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
 
-.debug_info     0x00000000     0xbf79
+.debug_info     0x00000000     0xbfc7
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0xf85 ./main.o
- .debug_info    0x00000f85      0xc62 ./motor_control.o
- .debug_info    0x00001be7      0xbd8 ./tfmini.o
- .debug_info    0x000027bf      0x6bf C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
- .debug_info    0x00002e7e     0x15a4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
- .debug_info    0x00004422     0x16e7 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
- .debug_info    0x00005b09     0x1114 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
- .debug_info    0x00006c1d     0x1afb C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
- .debug_info    0x00008718      0x54c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
- .debug_info    0x00008c64      0x53c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
- .debug_info    0x000091a0      0x480 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
- .debug_info    0x00009620     0x1aa2 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
- .debug_info    0x0000b0c2      0xeb7 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+ .debug_info    0x00000000      0xf91 ./main.o
+ .debug_info    0x00000f91      0xca4 ./motor_control.o
+ .debug_info    0x00001c35      0xbd8 ./tfmini.o
+ .debug_info    0x0000280d      0x6bf C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_info    0x00002ecc     0x15a4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+ .debug_info    0x00004470     0x16e7 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+ .debug_info    0x00005b57     0x1114 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+ .debug_info    0x00006c6b     0x1afb C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+ .debug_info    0x00008766      0x54c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
+ .debug_info    0x00008cb2      0x53c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .debug_info    0x000091ee      0x480 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
+ .debug_info    0x0000966e     0x1aa2 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+ .debug_info    0x0000b110      0xeb7 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
 
 .debug_abbrev   0x00000000     0x1406
  *(.debug_abbrev)
@@ -1178,117 +1181,117 @@ END GROUP
  .debug_abbrev  0x00001109      0x191 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
  .debug_abbrev  0x0000129a      0x16c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
 
-.debug_line     0x00000000     0x3dc4
+.debug_line     0x00000000     0x3de0
  *(.debug_line)
- .debug_line    0x00000000      0x902 ./main.o
- .debug_line    0x00000902      0x518 ./motor_control.o
- .debug_line    0x00000e1a      0x2a0 ./tfmini.o
- .debug_line    0x000010ba      0x458 C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
- .debug_line    0x00001512      0x575 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
- .debug_line    0x00001a87      0x6f2 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
- .debug_line    0x00002179      0x326 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
- .debug_line    0x0000249f      0x5f9 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
- .debug_line    0x00002a98      0x260 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
- .debug_line    0x00002cf8      0x27b C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
- .debug_line    0x00002f73      0x1a9 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
- .debug_line    0x0000311c      0x4d5 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
- .debug_line    0x000035f1      0x7d3 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+ .debug_line    0x00000000      0x90a ./main.o
+ .debug_line    0x0000090a      0x52c ./motor_control.o
+ .debug_line    0x00000e36      0x2a0 ./tfmini.o
+ .debug_line    0x000010d6      0x458 C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_line    0x0000152e      0x575 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+ .debug_line    0x00001aa3      0x6f2 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+ .debug_line    0x00002195      0x326 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+ .debug_line    0x000024bb      0x5f9 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+ .debug_line    0x00002ab4      0x260 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
+ .debug_line    0x00002d14      0x27b C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .debug_line    0x00002f8f      0x1a9 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
+ .debug_line    0x00003138      0x4d5 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+ .debug_line    0x0000360d      0x7d3 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
 
-.debug_frame    0x00000000     0x1cdc
+.debug_frame    0x00000000     0x1cfc
  *(.debug_frame)
  .debug_frame   0x00000000       0x90 ./main.o
- .debug_frame   0x00000090      0x160 ./motor_control.o
- .debug_frame   0x000001f0       0x54 ./tfmini.o
- .debug_frame   0x00000244      0x21c C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
- .debug_frame   0x00000460      0x2e4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
- .debug_frame   0x00000744      0x40c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
- .debug_frame   0x00000b50      0x118 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
- .debug_frame   0x00000c68      0x2cc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
- .debug_frame   0x00000f34      0x248 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
- .debug_frame   0x0000117c       0x64 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
- .debug_frame   0x000011e0      0x24c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
- .debug_frame   0x0000142c      0x764 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
- .debug_frame   0x00001b90       0x20 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
- .debug_frame   0x00001bb0       0x2c c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
- .debug_frame   0x00001bdc       0x28 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
- .debug_frame   0x00001c04       0x28 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strncmp.o)
- .debug_frame   0x00001c2c       0x34 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-w_exp.o)
- .debug_frame   0x00001c60       0x3c c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-e_exp.o)
- .debug_frame   0x00001c9c       0x20 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_finite.o)
- .debug_frame   0x00001cbc       0x20 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_matherr.o)
+ .debug_frame   0x00000090      0x180 ./motor_control.o
+ .debug_frame   0x00000210       0x54 ./tfmini.o
+ .debug_frame   0x00000264      0x21c C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_frame   0x00000480      0x2e4 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+ .debug_frame   0x00000764      0x40c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+ .debug_frame   0x00000b70      0x118 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+ .debug_frame   0x00000c88      0x2cc C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+ .debug_frame   0x00000f54      0x248 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
+ .debug_frame   0x0000119c       0x64 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .debug_frame   0x00001200      0x24c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+ .debug_frame   0x0000144c      0x764 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+ .debug_frame   0x00001bb0       0x20 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .debug_frame   0x00001bd0       0x2c c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .debug_frame   0x00001bfc       0x28 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .debug_frame   0x00001c24       0x28 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strncmp.o)
+ .debug_frame   0x00001c4c       0x34 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-w_exp.o)
+ .debug_frame   0x00001c80       0x3c c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-e_exp.o)
+ .debug_frame   0x00001cbc       0x20 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_finite.o)
+ .debug_frame   0x00001cdc       0x20 c:/microsemi/softconsole v3.3/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_matherr.o)
 
-.debug_str      0x00000000     0x42c9
+.debug_str      0x00000000     0x42d9
  *(.debug_str)
- .debug_str     0x00000000     0x146c ./main.o
-                               0x153e (size before relaxing)
- .debug_str     0x0000146c       0x7b ./motor_control.o
-                               0x10cf (size before relaxing)
- .debug_str     0x000014e7      0x2c4 ./tfmini.o
+ .debug_str     0x00000000     0x1472 ./main.o
+                               0x1544 (size before relaxing)
+ .debug_str     0x00001472       0x85 ./motor_control.o
+                               0x10d9 (size before relaxing)
+ .debug_str     0x000014f7      0x2c4 ./tfmini.o
                                 0xf29 (size before relaxing)
- .debug_str     0x000017ab      0x254 C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_str     0x000017bb      0x254 C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
                                 0x336 (size before relaxing)
- .debug_str     0x000019ff      0x603 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+ .debug_str     0x00001a0f      0x603 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
                                0x14c7 (size before relaxing)
- .debug_str     0x00002002      0x38c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+ .debug_str     0x00002012      0x38c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
                                0x1767 (size before relaxing)
- .debug_str     0x0000238e      0x14f C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+ .debug_str     0x0000239e      0x14f C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
                                0x129f (size before relaxing)
- .debug_str     0x000024dd     0x1018 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+ .debug_str     0x000024ed     0x1018 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
                                0x12e5 (size before relaxing)
- .debug_str     0x000034f5      0x13b C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
+ .debug_str     0x00003505      0x13b C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
                                 0x27d (size before relaxing)
- .debug_str     0x00003630       0xf7 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .debug_str     0x00003640       0xf7 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
                                 0x46a (size before relaxing)
- .debug_str     0x00003727      0x1ec C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
+ .debug_str     0x00003737      0x1ec C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
                                 0x450 (size before relaxing)
- .debug_str     0x00003913      0x32c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+ .debug_str     0x00003923      0x32c C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
                                 0xfb7 (size before relaxing)
- .debug_str     0x00003c3f      0x68a C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+ .debug_str     0x00003c4f      0x68a C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
                                0x1305 (size before relaxing)
 
-.debug_loc      0x00000000     0x2e25
+.debug_loc      0x00000000     0x2e5c
  *(.debug_loc)
  .debug_loc     0x00000000       0xde ./main.o
- .debug_loc     0x000000de      0x22d ./motor_control.o
- .debug_loc     0x0000030b       0x6e ./tfmini.o
- .debug_loc     0x00000379      0x3c6 C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
- .debug_loc     0x0000073f      0x510 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
- .debug_loc     0x00000c4f      0x736 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
- .debug_loc     0x00001385      0x1ef C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
- .debug_loc     0x00001574      0x53b C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
- .debug_loc     0x00001aaf      0x3de C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
- .debug_loc     0x00001e8d       0x99 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
- .debug_loc     0x00001f26      0x415 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
- .debug_loc     0x0000233b      0xaea C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+ .debug_loc     0x000000de      0x264 ./motor_control.o
+ .debug_loc     0x00000342       0x6e ./tfmini.o
+ .debug_loc     0x000003b0      0x3c6 C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_loc     0x00000776      0x510 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+ .debug_loc     0x00000c86      0x736 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+ .debug_loc     0x000013bc      0x1ef C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+ .debug_loc     0x000015ab      0x53b C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+ .debug_loc     0x00001ae6      0x3de C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
+ .debug_loc     0x00001ec4       0x99 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .debug_loc     0x00001f5d      0x415 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+ .debug_loc     0x00002372      0xaea C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
 
-.debug_macinfo  0x00000000    0x4e7e0
+.debug_macinfo  0x00000000    0x4e7fe
  *(.debug_macinfo)
  .debug_macinfo
-                0x00000000     0xb050 ./main.o
+                0x00000000     0xb05f ./main.o
  .debug_macinfo
-                0x0000b050     0x847b ./motor_control.o
+                0x0000b05f     0x848a ./motor_control.o
  .debug_macinfo
-                0x000134cb     0x5d8f ./tfmini.o
+                0x000134e9     0x5d8f ./tfmini.o
  .debug_macinfo
-                0x0001925a     0x4bf0 C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x00019278     0x4bf0 C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
  .debug_macinfo
-                0x0001de4a     0x63ca C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x0001de68     0x63ca C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
  .debug_macinfo
-                0x00024214     0x74ff C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+                0x00024232     0x74ff C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
  .debug_macinfo
-                0x0002b713     0x5ce1 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x0002b731     0x5ce1 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
  .debug_macinfo
-                0x000313f4     0x77dd C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+                0x00031412     0x77dd C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
  .debug_macinfo
-                0x00038bd1     0x1512 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
+                0x00038bef     0x1512 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
  .debug_macinfo
-                0x0003a0e3     0x5a7f C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x0003a101     0x5a7f C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
  .debug_macinfo
-                0x0003fb62     0x18af C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
+                0x0003fb80     0x18af C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_config.o)
  .debug_macinfo
-                0x00041411     0x5b7b C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+                0x0004142f     0x5b7b C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
  .debug_macinfo
-                0x00046f8c     0x7854 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+                0x00046faa     0x7854 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
 
 .debug_weaknames
  *(.debug_weaknames)
@@ -1378,16 +1381,16 @@ END GROUP
  *(.isr_vector)
 OUTPUT(audio_mss_MSS_CM3_0_app elf32-littlearm)
 
-.debug_ranges   0x00000000      0x800
+.debug_ranges   0x00000000      0x808
  .debug_ranges  0x00000000       0x30 ./main.o
- .debug_ranges  0x00000030       0x68 ./motor_control.o
- .debug_ranges  0x00000098       0x20 ./tfmini.o
- .debug_ranges  0x000000b8       0xa0 C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
- .debug_ranges  0x00000158       0xd0 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
- .debug_ranges  0x00000228      0x138 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
- .debug_ranges  0x00000360       0x58 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
- .debug_ranges  0x000003b8       0xd8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
- .debug_ranges  0x00000490       0xc0 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
- .debug_ranges  0x00000550       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
- .debug_ranges  0x00000578       0xa8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
- .debug_ranges  0x00000620      0x1e0 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)
+ .debug_ranges  0x00000030       0x70 ./motor_control.o
+ .debug_ranges  0x000000a0       0x20 ./tfmini.o
+ .debug_ranges  0x000000c0       0xa0 C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/SoftConsole/audio_mss_MSS_CM3_0/audio_mss_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_ranges  0x00000160       0xd0 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_uart.o)
+ .debug_ranges  0x00000230      0x138 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_i2c.o)
+ .debug_ranges  0x00000368       0x58 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+ .debug_ranges  0x000003c0       0xd8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(mss_ace.o)
+ .debug_ranges  0x00000498       0xc0 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(core_cm3.o)
+ .debug_ranges  0x00000558       0x28 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .debug_ranges  0x00000580       0xa8 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_convert.o)
+ .debug_ranges  0x00000628      0x1e0 C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\SoftConsole\audio_mss_MSS_CM3_0\audio_mss_MSS_CM3_0_hw_platform\Debug\libaudio_mss_MSS_CM3_0_hw_platform.a(ace_flags.o)

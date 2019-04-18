@@ -1,8 +1,8 @@
 
 Starting:    C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\mbin\synbatch.exe
 Install:     C:\Microsemi\Libero_SoC_v11.9\SynplifyPro
-Hostname:    EECS373-07
-Date:        Tue Apr 16 13:02:04 2019
+Hostname:    EECS373-10
+Date:        Thu Apr 18 13:40:18 2019
 Version:     L-2016.09M-SP1-5
 
 Arguments:   -product synplify_pro -licensetype synplifypro_actel -batch -log synplify.log audio_mss_syn.tcl
@@ -28,32 +28,32 @@ Running audio_mss_syn|synthesis
 
 
 Running: compile (Compile) on audio_mss_syn|synthesis
-# Tue Apr 16 13:02:04 2019
+# Thu Apr 18 13:40:19 2019
 
 
 Running: compile_flow (Compile Process) on audio_mss_syn|synthesis
-# Tue Apr 16 13:02:04 2019
+# Thu Apr 18 13:40:19 2019
 
 
 Running: compiler (Compile Input) on audio_mss_syn|synthesis
-# Tue Apr 16 13:02:04 2019
+# Thu Apr 18 13:40:19 2019
 
 Copied C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\synwork\audio_mss_comp.srs to C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\audio_mss.srs
 
 
 compiler completed
-# Tue Apr 16 13:02:05 2019
+# Thu Apr 18 13:40:20 2019
 
 Return Code: 0
 Run Time:00h:00m:01s
 
 
 Running: multi_srs_gen (Multi-srs Generator) on audio_mss_syn|synthesis
-# Tue Apr 16 13:02:05 2019
+# Thu Apr 18 13:40:20 2019
 
 
 multi_srs_gen completed
-# Tue Apr 16 13:02:05 2019
+# Thu Apr 18 13:40:20 2019
 
 Return Code: 0
 Run Time:00h:00m:00s
@@ -64,11 +64,11 @@ Complete: Compile Process on audio_mss_syn|synthesis
 
 
 Running: premap (Pre-mapping) on audio_mss_syn|synthesis
-# Tue Apr 16 13:02:05 2019
+# Thu Apr 18 13:40:20 2019
 
 
 premap completed
-# Tue Apr 16 13:02:06 2019
+# Thu Apr 18 13:40:21 2019
 
 Return Code: 0
 Run Time:00h:00m:01s
@@ -77,19 +77,19 @@ Complete: Compile on audio_mss_syn|synthesis
 
 
 Running: map (Map) on audio_mss_syn|synthesis
-# Tue Apr 16 13:02:06 2019
+# Thu Apr 18 13:40:21 2019
 
 License granted for 4 parallel jobs
 
 
 Running: fpga_mapper (Map & Optimize) on audio_mss_syn|synthesis
-# Tue Apr 16 13:02:06 2019
+# Thu Apr 18 13:40:21 2019
 
 Copied C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\synwork\audio_mss_m.srm to C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\audio_mss.srm
 
 
 fpga_mapper completed with warnings
-# Tue Apr 16 13:02:06 2019
+# Thu Apr 18 13:40:21 2019
 
 Return Code: 1
 Run Time:00h:00m:00s
