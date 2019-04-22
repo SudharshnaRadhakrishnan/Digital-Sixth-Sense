@@ -16,30 +16,40 @@ void init_motors_on_mux();
 void level_audio_emit(int level);
 int signal_level_mapping(double signal, int scaling_factor, int constant_factor);
 void level_motor_mapper(int mode, int level);
-void GPIO1_IRQHandler( void );
+void GPIO1_IRQHandler(void);
 
-int main()
-{
+
+// Shared Data
+int level = 5;
+
+
+int main(){
 	uint32_t mode = 0;
 	io_init();
-	if(mode == 0){
-		lidar_routine(mode);
-	}	  
+	motor_routine(aquire_level);  
+	return 0;
 }
 
-void lidar_routine(uint32_t mode){
-	int distance = 1000;
-    uint32_t measure_counter = 0;
+int aquire_level(){
+	double distance = measure();
+	return signal_level_mapping(distance, 1, 30);
+}
 
-    while(1) {
+void motor_routine(int level){
+    uint32_t measure_counter = 0;
+    while(MOTOR_ON) {
     	if(measure_counter == 20000){
-			distance = measure();
-			int level = signal_level_mapping(distance, 1, 30);
 			level_motor_mapper(mode, level);
-			level_audio_emit(distance);
+			go();
 			measure_counter = 0;
     	}
     	measure_counter++;
+    }
+}
+
+void sound_routine(int level){
+	while(SOUND_ON) {
+		level_audio_emit(level)
     }
 }
 
@@ -95,7 +105,7 @@ void init_motors_on_mux(){
 
 void level_audio_emit(int level){
 	uint32_t counter = 0;
-	if(counter >= level * 40) {
+	if(counter >= level * 400) {
 		if (sigSw == 0) {
 			outSig = 65536;
 			sigSw = 1;
@@ -111,7 +121,7 @@ void level_audio_emit(int level){
 
 int level_audio_mapping(int level){
 	uint32_t counter = 0;
-	if(counter >= level * 40) {
+	if(counter >= level * 400) {
 		if (sigSw == 0) {
 			outSig = 65536;
 			sigSw = 1;
@@ -143,7 +153,6 @@ void level_motor_mapper(int mode, int level){
 		//MSS_GPIO_set_outputs(MSS_GPIO_2_MASK | MSS_GPIO_3_MASK | MSS_GPIO_4_MASK | MSS_GPIO_5_MASK | MSS_GPIO_6_MASK);
 		tcaselect((uint8_t)0b00011111);
 		setWaveform(0, 69 - level);
-		go();
 	}
 	else if (mode == 1 && level > 0) {
 		if (level == 1) {
@@ -162,7 +171,6 @@ void level_motor_mapper(int mode, int level){
 			tcaselect((uint8_t)0b00011111);
 		}
 		setWaveform(0, 64);
-		go();
 	}
 }
 
