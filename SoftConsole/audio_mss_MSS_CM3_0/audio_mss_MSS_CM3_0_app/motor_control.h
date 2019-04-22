@@ -69,4 +69,5 @@ void setRealtimeValue(uint8_t rtp);
 void useERM ();
 void useLRA ();
 void tcaselect(uint8_t i);
+void set_motor_to_waveform(uint32_t motor_sel_mask, uint8_t slot, uint8_t waveform );
 #endif

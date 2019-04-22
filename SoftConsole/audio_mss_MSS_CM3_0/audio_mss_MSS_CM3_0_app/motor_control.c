@@ -84,7 +84,10 @@ void setWaveform(uint8_t slot, uint8_t w) {
 void selectLibrary(uint8_t lib) {
   writeRegister8(DRV2605_REG_LIBRARY, lib);
 }
-
+void set_motor_to_waveform(uint32_t motor_sel_mask, uint8_t slot, uint8_t waveform ){
+	tcaselect(motor_sel_mask);
+	setWaveform(slot, waveform);
+}
 /**************************************************************************/
 /*!
   @brief Start playback of the waveforms (start moving!).
