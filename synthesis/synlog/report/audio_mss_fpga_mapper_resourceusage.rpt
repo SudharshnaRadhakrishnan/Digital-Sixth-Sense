@@ -16,19 +16,21 @@ Report for cell audio_mss.verilog
 
   IO Cell usage:
               cell count
+         BIBUF_MSS     2
    BIBUF_OPEND_MSS     4
              INBUF     1
            INBUF_A     1
-         INBUF_MSS     3
+         INBUF_MSS     4
             OUTBUF     5
           OUTBUF_A     1
         OUTBUF_MSS     2
+       TRIBUFF_MSS     1
                    -----
-             TOTAL    17
+             TOTAL    21
 
 
 Core Cells         : 0 of 4608 (0%)
-IO Cells           : 17
+IO Cells           : 21
 
   RAM/ROM Usage Summary
 Block Rams : 0 of 8 (0%)

@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timeStamp 2019 4 18 13 40 21)
+      (timeStamp 2019 4 22 22 54 53)
       (author "Synopsys, Inc.")
       (program "Synplify Pro" (version "L-2016.09M-SP1-5, mapper mapact, Build 2172R"))
      )
@@ -303,6 +303,27 @@
          )
        )
     )
+    (cell BIBUF_MSS (cellType GENERIC)
+      (property ACT_CONFIG (integer 0))
+      (property ACT_PIN (string ""))
+      (property preferred (string "true"))
+      (property pad_cell (string "true"))
+      (property dont_touch (string "false"))
+       (view prim (viewType NETLIST)
+         (interface
+           (port PAD (direction INOUT)
+           (property three_state (string "E'"))
+           (property function (string "D"))
+           (property is_pad (string "true"))
+ )
+           (port Y (direction OUTPUT)
+           (property function (string "PAD"))
+ )
+           (port D (direction INPUT))
+           (port E (direction INPUT))
+         )
+       )
+    )
     (cell OUTBUF_MSS (cellType GENERIC)
       (property ACT_CONFIG (integer 0))
       (property ACT_PIN (string ""))
@@ -567,6 +588,20 @@
         (property orig_inst_of (string "audio_mss_tmp_MSS_CCC_0_MSS_CCC"))
        )
     )
+    (cell TRIBUFF_MSS (cellType GENERIC)
+       (view verilog (viewType NETLIST)
+         (interface
+           (port D (direction INPUT))
+           (port E (direction INPUT))
+           (port PAD (direction OUTPUT))
+         )
+        (property langParams (string "ACT_PIN ACT_CONFIG"))
+        (property black_box_pad_pin (string "PAD"))
+        (property ACT_CONFIG (integer 0))
+        (property ACT_PIN (string "T17"))
+        (property orig_inst_of (string "TRIBUFF_MSS"))
+       )
+    )
     (cell MSSINT (cellType GENERIC)
        (view verilog (viewType NETLIST)
          (interface
@@ -581,6 +616,7 @@
          (interface
            (port F2M_GPI_1 (direction INPUT))
            (port MSS_RESET_N (direction INPUT))
+           (port SPI_1_DI (direction INPUT))
            (port UART_0_RXD (direction INPUT))
            (port UART_1_RXD (direction INPUT))
            (port VAREF1 (direction INPUT))
@@ -590,12 +626,15 @@
            (port M2F_GPO_5 (direction OUTPUT))
            (port M2F_GPO_6 (direction OUTPUT))
            (port SDD_1 (direction OUTPUT))
+           (port SPI_1_DO (direction OUTPUT))
            (port UART_0_TXD (direction OUTPUT))
            (port UART_1_TXD (direction OUTPUT))
            (port I2C_0_SCL (direction INOUT))
            (port I2C_0_SDA (direction INOUT))
            (port I2C_1_SCL (direction INOUT))
            (port I2C_1_SDA (direction INOUT))
+           (port SPI_1_CLK (direction INOUT))
+           (port SPI_1_SS (direction INOUT))
          )
          (contents
           (instance M2F_GPO_6_pad (viewRef prim (cellRef OUTBUF (libraryRef smartfusion)))
@@ -641,6 +680,25 @@
            (property is_instantiated (integer 1))
            (property ACT_CONFIG (integer 0))
            (property ACT_PIN (string "U18"))
+          )
+          (instance MSS_SPI_1_SS (viewRef prim (cellRef BIBUF_MSS (libraryRef smartfusion)))
+           (property is_instantiated (integer 1))
+           (property ACT_CONFIG (integer 0))
+           (property ACT_PIN (string "W21"))
+          )
+          (instance MSS_SPI_1_DO (viewRef verilog (cellRef TRIBUFF_MSS))
+           (property ACT_CONFIG (integer 0))
+           (property ACT_PIN (string "T17"))
+          )
+          (instance MSS_SPI_1_DI (viewRef prim (cellRef INBUF_MSS (libraryRef smartfusion)))
+           (property is_instantiated (integer 1))
+           (property ACT_CONFIG (integer 0))
+           (property ACT_PIN (string "V19"))
+          )
+          (instance MSS_SPI_1_CLK (viewRef prim (cellRef BIBUF_MSS (libraryRef smartfusion)))
+           (property is_instantiated (integer 1))
+           (property ACT_CONFIG (integer 0))
+           (property ACT_PIN (string "AA22"))
           )
           (instance MSS_RESET_0_MSS_RESET_N (viewRef prim (cellRef INBUF_MSS (libraryRef smartfusion)))
            (property is_instantiated (integer 1))
@@ -688,6 +746,10 @@
            (portRef MSS_RESET_N)
            (portRef PAD (instanceRef MSS_RESET_0_MSS_RESET_N))
           ))
+          (net SPI_1_DI (joined
+           (portRef SPI_1_DI)
+           (portRef PAD (instanceRef MSS_SPI_1_DI))
+          ))
           (net UART_0_RXD (joined
            (portRef UART_0_RXD)
            (portRef PAD (instanceRef MSS_UART_0_RXD))
@@ -703,6 +765,10 @@
           (net SDD_1 (joined
            (portRef PAD (instanceRef MSS_ACE_0_SDD1))
            (portRef SDD_1)
+          ))
+          (net SPI_1_DO (joined
+           (portRef PAD (instanceRef MSS_SPI_1_DO))
+           (portRef SPI_1_DO)
           ))
           (net UART_0_TXD (joined
            (portRef PAD (instanceRef MSS_UART_0_TXD))
@@ -727,6 +793,14 @@
           (net I2C_1_SDA (joined
            (portRef PAD (instanceRef MSS_I2C_1_SDA))
            (portRef I2C_1_SDA)
+          ))
+          (net SPI_1_CLK (joined
+           (portRef PAD (instanceRef MSS_SPI_1_CLK))
+           (portRef SPI_1_CLK)
+          ))
+          (net SPI_1_SS (joined
+           (portRef PAD (instanceRef MSS_SPI_1_SS))
+           (portRef SPI_1_SS)
           ))
           (net (rename MSS_ADLIB_INST_ACEFLAGS_0 "MSS_ADLIB_INST_ACEFLAGS[0]") (joined
            (portRef (member aceflags 31) (instanceRef MSS_ADLIB_INST))
@@ -1538,42 +1612,6 @@
           (net (rename MSS_ADLIB_INST_SPI0SSO_7 "MSS_ADLIB_INST_SPI0SSO[7]") (joined
            (portRef (member spi0sso 0) (instanceRef MSS_ADLIB_INST))
           ))
-          (net MSS_ADLIB_INST_SPI1CLKO (joined
-           (portRef SPI1CLKO (instanceRef MSS_ADLIB_INST))
-          ))
-          (net MSS_ADLIB_INST_SPI1DO (joined
-           (portRef SPI1DO (instanceRef MSS_ADLIB_INST))
-          ))
-          (net MSS_ADLIB_INST_SPI1DOE (joined
-           (portRef SPI1DOE (instanceRef MSS_ADLIB_INST))
-          ))
-          (net MSS_ADLIB_INST_SPI1MODE (joined
-           (portRef SPI1MODE (instanceRef MSS_ADLIB_INST))
-          ))
-          (net (rename MSS_ADLIB_INST_SPI1SSO_0 "MSS_ADLIB_INST_SPI1SSO[0]") (joined
-           (portRef (member spi1sso 7) (instanceRef MSS_ADLIB_INST))
-          ))
-          (net (rename MSS_ADLIB_INST_SPI1SSO_1 "MSS_ADLIB_INST_SPI1SSO[1]") (joined
-           (portRef (member spi1sso 6) (instanceRef MSS_ADLIB_INST))
-          ))
-          (net (rename MSS_ADLIB_INST_SPI1SSO_2 "MSS_ADLIB_INST_SPI1SSO[2]") (joined
-           (portRef (member spi1sso 5) (instanceRef MSS_ADLIB_INST))
-          ))
-          (net (rename MSS_ADLIB_INST_SPI1SSO_3 "MSS_ADLIB_INST_SPI1SSO[3]") (joined
-           (portRef (member spi1sso 4) (instanceRef MSS_ADLIB_INST))
-          ))
-          (net (rename MSS_ADLIB_INST_SPI1SSO_4 "MSS_ADLIB_INST_SPI1SSO[4]") (joined
-           (portRef (member spi1sso 3) (instanceRef MSS_ADLIB_INST))
-          ))
-          (net (rename MSS_ADLIB_INST_SPI1SSO_5 "MSS_ADLIB_INST_SPI1SSO[5]") (joined
-           (portRef (member spi1sso 2) (instanceRef MSS_ADLIB_INST))
-          ))
-          (net (rename MSS_ADLIB_INST_SPI1SSO_6 "MSS_ADLIB_INST_SPI1SSO[6]") (joined
-           (portRef (member spi1sso 1) (instanceRef MSS_ADLIB_INST))
-          ))
-          (net (rename MSS_ADLIB_INST_SPI1SSO_7 "MSS_ADLIB_INST_SPI1SSO[7]") (joined
-           (portRef (member spi1sso 0) (instanceRef MSS_ADLIB_INST))
-          ))
           (net MSS_ADLIB_INST_TXEV (joined
            (portRef TXEV (instanceRef MSS_ADLIB_INST))
           ))
@@ -1832,9 +1870,6 @@
            (portRef MACMDI (instanceRef MSS_ADLIB_INST))
            (portRef MACRXER (instanceRef MSS_ADLIB_INST))
            (portRef MACCRSDV (instanceRef MSS_ADLIB_INST))
-           (portRef SPI1SSI (instanceRef MSS_ADLIB_INST))
-           (portRef SPI1CLKI (instanceRef MSS_ADLIB_INST))
-           (portRef SPI1DI (instanceRef MSS_ADLIB_INST))
            (portRef SPI0SSI (instanceRef MSS_ADLIB_INST))
            (portRef SPI0CLKI (instanceRef MSS_ADLIB_INST))
            (portRef SPI0DI (instanceRef MSS_ADLIB_INST))
@@ -2015,6 +2050,60 @@
           (net MSS_RESET_0_MSS_RESET_N_Y (joined
            (portRef Y (instanceRef MSS_RESET_0_MSS_RESET_N))
            (portRef MSSRESETn (instanceRef MSS_ADLIB_INST))
+          ))
+          (net MSS_SPI_1_CLK_Y (joined
+           (portRef Y (instanceRef MSS_SPI_1_CLK))
+           (portRef SPI1CLKI (instanceRef MSS_ADLIB_INST))
+          ))
+          (net MSS_SPI_1_CLK_D (joined
+           (portRef SPI1CLKO (instanceRef MSS_ADLIB_INST))
+           (portRef D (instanceRef MSS_SPI_1_CLK))
+          ))
+          (net MSS_SPI_1_DI_Y (joined
+           (portRef Y (instanceRef MSS_SPI_1_DI))
+           (portRef SPI1DI (instanceRef MSS_ADLIB_INST))
+          ))
+          (net MSS_SPI_1_DO_D (joined
+           (portRef SPI1DO (instanceRef MSS_ADLIB_INST))
+           (portRef D (instanceRef MSS_SPI_1_DO))
+          ))
+          (net MSS_SPI_1_DO_E (joined
+           (portRef SPI1DOE (instanceRef MSS_ADLIB_INST))
+           (portRef E (instanceRef MSS_SPI_1_DO))
+          ))
+          (net MSS_SPI_1_SS_E (joined
+           (portRef SPI1MODE (instanceRef MSS_ADLIB_INST))
+           (portRef E (instanceRef MSS_SPI_1_CLK))
+           (portRef E (instanceRef MSS_SPI_1_SS))
+          ))
+          (net MSS_SPI_1_SS_Y (joined
+           (portRef Y (instanceRef MSS_SPI_1_SS))
+           (portRef SPI1SSI (instanceRef MSS_ADLIB_INST))
+          ))
+          (net (rename SPI1SSO_net_0_0 "SPI1SSO_net_0[0]") (joined
+           (portRef (member spi1sso 7) (instanceRef MSS_ADLIB_INST))
+           (portRef D (instanceRef MSS_SPI_1_SS))
+          ))
+          (net (rename SPI1SSO_net_0_1 "SPI1SSO_net_0[1]") (joined
+           (portRef (member spi1sso 6) (instanceRef MSS_ADLIB_INST))
+          ))
+          (net (rename SPI1SSO_net_0_2 "SPI1SSO_net_0[2]") (joined
+           (portRef (member spi1sso 5) (instanceRef MSS_ADLIB_INST))
+          ))
+          (net (rename SPI1SSO_net_0_3 "SPI1SSO_net_0[3]") (joined
+           (portRef (member spi1sso 4) (instanceRef MSS_ADLIB_INST))
+          ))
+          (net (rename SPI1SSO_net_0_4 "SPI1SSO_net_0[4]") (joined
+           (portRef (member spi1sso 3) (instanceRef MSS_ADLIB_INST))
+          ))
+          (net (rename SPI1SSO_net_0_5 "SPI1SSO_net_0[5]") (joined
+           (portRef (member spi1sso 2) (instanceRef MSS_ADLIB_INST))
+          ))
+          (net (rename SPI1SSO_net_0_6 "SPI1SSO_net_0[6]") (joined
+           (portRef (member spi1sso 1) (instanceRef MSS_ADLIB_INST))
+          ))
+          (net (rename SPI1SSO_net_0_7 "SPI1SSO_net_0[7]") (joined
+           (portRef (member spi1sso 0) (instanceRef MSS_ADLIB_INST))
           ))
           (net MSS_UART_0_RXD_Y (joined
            (portRef Y (instanceRef MSS_UART_0_RXD))

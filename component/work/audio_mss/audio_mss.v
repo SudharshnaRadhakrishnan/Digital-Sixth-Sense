@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Apr 16 13:01:22 2019
+// Created by SmartDesign Mon Apr 22 22:53:17 2019
 // Version: v11.9 11.9.0.4
 //////////////////////////////////////////////////////////////////////
 
@@ -10,6 +10,7 @@ module audio_mss(
     // Inputs
     F2M_GPI_1,
     MSS_RESET_N,
+    SPI_1_DI,
     UART_0_RXD,
     UART_1_RXD,
     VAREF1,
@@ -20,13 +21,16 @@ module audio_mss(
     M2F_GPO_5,
     M2F_GPO_6,
     SDD_1,
+    SPI_1_DO,
     UART_0_TXD,
     UART_1_TXD,
     // Inouts
     I2C_0_SCL,
     I2C_0_SDA,
     I2C_1_SCL,
-    I2C_1_SDA
+    I2C_1_SDA,
+    SPI_1_CLK,
+    SPI_1_SS
 );
 
 //--------------------------------------------------------------------
@@ -34,6 +38,7 @@ module audio_mss(
 //--------------------------------------------------------------------
 input  F2M_GPI_1;
 input  MSS_RESET_N;
+input  SPI_1_DI;
 input  UART_0_RXD;
 input  UART_1_RXD;
 input  VAREF1;
@@ -46,6 +51,7 @@ output M2F_GPO_4;
 output M2F_GPO_5;
 output M2F_GPO_6;
 output SDD_1;
+output SPI_1_DO;
 output UART_0_TXD;
 output UART_1_TXD;
 //--------------------------------------------------------------------
@@ -55,6 +61,8 @@ inout  I2C_0_SCL;
 inout  I2C_0_SDA;
 inout  I2C_1_SCL;
 inout  I2C_1_SDA;
+inout  SPI_1_CLK;
+inout  SPI_1_SS;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -81,6 +89,14 @@ wire          MSS_I2C_1_SDA_E;
 wire          MSS_I2C_1_SDA_Y;
 wire          MSS_RESET_0_MSS_RESET_N_Y;
 wire          MSS_RESET_N;
+wire          MSS_SPI_1_CLK_D;
+wire          MSS_SPI_1_CLK_Y;
+wire          MSS_SPI_1_DI_Y;
+wire          MSS_SPI_1_DO_D;
+wire          MSS_SPI_1_DO_E;
+wire   [0:0]  MSS_SPI_1_SS_D;
+wire          MSS_SPI_1_SS_E;
+wire          MSS_SPI_1_SS_Y;
 wire          MSS_UART_0_RXD_Y;
 wire          MSS_UART_0_TXD_D;
 wire          MSS_UART_1_RXD_Y;
@@ -97,6 +113,10 @@ wire          net_73;
 wire          net_74;
 wire          net_75;
 wire          SDD_1_net_0;
+wire          SPI_1_CLK;
+wire          SPI_1_DI;
+wire          SPI_1_DO_net_0;
+wire          SPI_1_SS;
 wire          UART_0_RXD;
 wire          UART_0_TXD_net_0;
 wire          UART_1_RXD;
@@ -109,9 +129,11 @@ wire          net_72_net_0;
 wire          net_71_net_0;
 wire          UART_0_TXD_net_1;
 wire          UART_1_TXD_net_1;
+wire          SPI_1_DO_net_1;
 wire          SDD_1_net_1;
 wire   [31:0] GPI_net_0;
 wire   [31:0] GPO_net_0;
+wire   [7:0]  SPI1SSO_net_0;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -153,11 +175,14 @@ assign UART_0_TXD_net_1 = UART_0_TXD_net_0;
 assign UART_0_TXD       = UART_0_TXD_net_1;
 assign UART_1_TXD_net_1 = UART_1_TXD_net_0;
 assign UART_1_TXD       = UART_1_TXD_net_1;
+assign SPI_1_DO_net_1   = SPI_1_DO_net_0;
+assign SPI_1_DO         = SPI_1_DO_net_1;
 assign SDD_1_net_1      = SDD_1_net_0;
 assign SDD_1            = SDD_1_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
+assign MSS_SPI_1_SS_D[0] = SPI1SSO_net_0[0:0];
 assign MSSINT_GPO_2_A[2] = GPO_net_0[2:2];
 assign MSSINT_GPO_3_A[3] = GPO_net_0[3:3];
 assign MSSINT_GPO_4_A[4] = GPO_net_0[4:4];
@@ -259,9 +284,9 @@ MSS_ADLIB_INST(
         .UART0RXD       ( MSS_UART_0_RXD_Y ),
         .I2C0SDAI       ( MSS_I2C_0_SDA_Y ),
         .I2C0SCLI       ( MSS_I2C_0_SCL_Y ),
-        .SPI1DI         ( GND_net ), // tied to 1'b0 from definition
-        .SPI1CLKI       ( GND_net ), // tied to 1'b0 from definition
-        .SPI1SSI        ( GND_net ), // tied to 1'b0 from definition
+        .SPI1DI         ( MSS_SPI_1_DI_Y ),
+        .SPI1CLKI       ( MSS_SPI_1_CLK_Y ),
+        .SPI1SSI        ( MSS_SPI_1_SS_Y ),
         .UART1RXD       ( MSS_UART_1_RXD_Y ),
         .I2C1SDAI       ( MSS_I2C_1_SDA_Y ),
         .I2C1SCLI       ( MSS_I2C_1_SCL_Y ),
@@ -382,11 +407,11 @@ MSS_ADLIB_INST(
         .UART0TXD       ( MSS_UART_0_TXD_D ),
         .I2C0SDAO       ( MSS_I2C_0_SDA_E ),
         .I2C0SCLO       ( MSS_I2C_0_SCL_E ),
-        .SPI1DO         (  ),
-        .SPI1DOE        (  ),
-        .SPI1CLKO       (  ),
-        .SPI1MODE       (  ),
-        .SPI1SSO        (  ),
+        .SPI1DO         ( MSS_SPI_1_DO_D ),
+        .SPI1DOE        ( MSS_SPI_1_DO_E ),
+        .SPI1CLKO       ( MSS_SPI_1_CLK_D ),
+        .SPI1MODE       ( MSS_SPI_1_SS_E ),
+        .SPI1SSO        ( SPI1SSO_net_0 ),
         .UART1TXD       ( MSS_UART_1_TXD_D ),
         .I2C1SDAO       ( MSS_I2C_1_SDA_E ),
         .I2C1SCLO       ( MSS_I2C_1_SCL_E ),
@@ -507,6 +532,57 @@ MSS_RESET_0_MSS_RESET_N(
         .PAD ( MSS_RESET_N ),
         // Outputs
         .Y   ( MSS_RESET_0_MSS_RESET_N_Y ) 
+        );
+
+//--------BIBUF_MSS
+BIBUF_MSS #( 
+        .ACT_CONFIG ( 0 ),
+        .ACT_PIN    ( "AA22" ) )
+MSS_SPI_1_CLK(
+        // Inputs
+        .D   ( MSS_SPI_1_CLK_D ),
+        .E   ( MSS_SPI_1_SS_E ),
+        // Outputs
+        .Y   ( MSS_SPI_1_CLK_Y ),
+        // Inouts
+        .PAD ( SPI_1_CLK ) 
+        );
+
+//--------INBUF_MSS
+INBUF_MSS #( 
+        .ACT_CONFIG ( 0 ),
+        .ACT_PIN    ( "V19" ) )
+MSS_SPI_1_DI(
+        // Inputs
+        .PAD ( SPI_1_DI ),
+        // Outputs
+        .Y   ( MSS_SPI_1_DI_Y ) 
+        );
+
+//--------TRIBUFF_MSS
+TRIBUFF_MSS #( 
+        .ACT_CONFIG ( 0 ),
+        .ACT_PIN    ( "T17" ) )
+MSS_SPI_1_DO(
+        // Inputs
+        .D   ( MSS_SPI_1_DO_D ),
+        .E   ( MSS_SPI_1_DO_E ),
+        // Outputs
+        .PAD ( SPI_1_DO_net_0 ) 
+        );
+
+//--------BIBUF_MSS
+BIBUF_MSS #( 
+        .ACT_CONFIG ( 0 ),
+        .ACT_PIN    ( "W21" ) )
+MSS_SPI_1_SS(
+        // Inputs
+        .D   ( MSS_SPI_1_SS_D ),
+        .E   ( MSS_SPI_1_SS_E ),
+        // Outputs
+        .Y   ( MSS_SPI_1_SS_Y ),
+        // Inouts
+        .PAD ( SPI_1_SS ) 
         );
 
 //--------INBUF_MSS
