@@ -60,7 +60,7 @@ void sound_routine(int level){
 void io_init(){
 	// const uint8_t frame_size = 32;
 	// const uint32_t master_tx_frame = 0x0100A0E1;
-	// SPI_init(master_tx_frame, frame_size);
+	SPI_init(master_tx_frame, frame_size);
 	GPIO_init();
 	DAC_init();
 	MSS_I2C_init( &g_mss_i2c1, TCAADDR, MSS_I2C_PCLK_DIV_256 );
@@ -69,6 +69,7 @@ void io_init(){
 void GPIO_init(){
 	MSS_GPIO_init();
 	MSS_GPIO_config(MSS_GPIO_1, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
+	MSS_GPIO_config(MSS_GPIO_2, MSS_GPIO_OUTPUT_MODE);
 	MSS_GPIO_enable_irq( MSS_GPIO_1);
 }
 void DAC_init(){
@@ -83,20 +84,19 @@ void DAC_init(){
     ACE_enable_sdd(SDD1_OUT);
 }
 
-// void SPI_init(const uint32_t master_tx_frame, const uint8_t frame_size){
-// 	MSS_SPI_init( &g_mss_spi1 );
-// 	MSS_SPI_configure_master_mode(
-// 		&g_mss_spi1,
-// 		MSS_SPI_SLAVE_0,
-// 		MSS_SPI_MODE1,
-// 		MSS_SPI_PCLK_DIV_256,
-// 		frame_size
-// 	);
+ void SPI_init(const uint8_t frame_size){
+ 	MSS_SPI_init( &g_mss_spi1 );
+ 	MSS_SPI_configure_master_mode(
+ 		&g_mss_spi1,
+ 		MSS_SPI_SLAVE_0,
+ 		MSS_SPI_MODE1,
+ 		MSS_SPI_PCLK_DIV_256,
+ 		frame_size
+ 	);
 
-// 	MSS_SPI_set_slave_select( &g_mss_spi1, MSS_SPI_SLAVE_0 );
-// 	MSS_SPI_transfer_frame( &g_mss_spi1, master_tx_frame );
-// 	MSS_SPI_clear_slave_select( &g_mss_spi1, MSS_SPI_SLAVE_0 );
-// }
+ 	MSS_SPI_set_slave_select( &g_mss_spi1, MSS_SPI_SLAVE_0 );
+ 	MSS_SPI_clear_slave_select( &g_mss_spi1, MSS_SPI_SLAVE_0 );
+}
 
 void init_motors_on_mux(){
 	tcaselect((uint8_t)0b00011111);
@@ -211,5 +211,3 @@ void GPIO1_IRQHandler( void ) {
 	motor_state = motor_state ^ 1;
 	MSS_GPIO_clear_irq( MSS_GPIO_1 );
 }
-
-
