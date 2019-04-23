@@ -20,6 +20,10 @@ int main()
 {
 	MSS_GPIO_init();
 	MSS_GPIO_config(MSS_GPIO_1, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
+
+	MSS_GPIO_config(MSS_GPIO_2, MSS_GPIO_OUTPUT_MODE);
+	MSS_GPIO_set_output(MSS_GPIO_2, 1);
+
 	MSS_GPIO_enable_irq( MSS_GPIO_1);
 	ACE_init();
     /* DAC initialization */
@@ -48,13 +52,24 @@ int main()
 	setMode(DRV2605_MODE_INTTRIG);
 	setWaveform(1, 0);
 
-
-
-
     while(1) {
     	if(measure_counter == 20000){
     		// FROM LIDAR/MOTOR CODE
 			distance = measure();
+
+			while(distance == -1){
+				int count = 0;
+				while(count < 20000){
+					MSS_GPIO_set_output(MSS_GPIO_2, 0);
+					++count;
+				}
+				MSS_GPIO_set_output(MSS_GPIO_2, 1);
+				count = 0;
+				while(count < 2500000){++count;}
+				distance = measure();
+			}
+
+
 			int vibration_strength = 5;
 			int power = 2;
 			int level = -1;
@@ -161,5 +176,3 @@ void GPIO1_IRQHandler( void ) {
 	mode = mode ^ 1;
 	MSS_GPIO_clear_irq( MSS_GPIO_1 );
 }
-
-
