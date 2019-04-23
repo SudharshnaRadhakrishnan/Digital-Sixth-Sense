@@ -40,7 +40,7 @@ int measure()
 		}
 		else{
 			uint16_t distance = (rx_buff[3] << 8) + rx_buff[2];
-			if(distance > 1000){
+			if(distance > 1200){
 				++too_large;
 			}
 			else{

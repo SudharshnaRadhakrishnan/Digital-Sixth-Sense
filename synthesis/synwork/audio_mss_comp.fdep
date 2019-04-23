@@ -1,18 +1,18 @@
-#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\sradha\\Desktop\\DigitalSixthSenseUpdate\\synthesis\\synwork\\audio_mss_comp.srs|-top|audio_mss|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-I|C:\\Users\\sradha\\Desktop\\DigitalSixthSenseUpdate\\synthesis\\|-I|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib|-v2001|-devicelib|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\smartfusion.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work"
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\aybasha\\Downloads\\DigitalSixthSenseUpdate\\synthesis\\synwork\\audio_mss_comp.srs|-top|audio_mss|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-I|C:\\Users\\aybasha\\Downloads\\DigitalSixthSenseUpdate\\synthesis\\|-I|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib|-v2001|-devicelib|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\smartfusion.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work"
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\bin64\\c_ver.exe":1509358336
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\smartfusion.v":1509027488
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\hypermods.v":1509029528
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\umr_capim.v":1509029528
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1509029528
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1509029528
-#CUR:"C:\\Users\\sradha\\Desktop\\DigitalSixthSenseUpdate\\component\\Actel\\SmartFusionMSS\\MSS\\2.5.200\\mss_comps.v":1555609057
-#CUR:"C:\\Users\\sradha\\Desktop\\DigitalSixthSenseUpdate\\component\\work\\audio_mss\\mss_tshell.v":1555609057
-#CUR:"C:\\Users\\sradha\\Desktop\\DigitalSixthSenseUpdate\\component\\work\\audio_mss\\MSS_CCC_0\\audio_mss_tmp_MSS_CCC_0_MSS_CCC.v":1555609057
-#CUR:"C:\\Users\\sradha\\Desktop\\DigitalSixthSenseUpdate\\component\\work\\audio_mss\\audio_mss.v":1555609057
-0			"C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v" verilog
-1			"C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\component\work\audio_mss\mss_tshell.v" verilog
-2			"C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\component\work\audio_mss\MSS_CCC_0\audio_mss_tmp_MSS_CCC_0_MSS_CCC.v" verilog
-3			"C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\component\work\audio_mss\audio_mss.v" verilog
+#CUR:"C:\\Users\\aybasha\\Downloads\\DigitalSixthSenseUpdate\\component\\Actel\\SmartFusionMSS\\MSS\\2.5.200\\mss_comps.v":1555965180
+#CUR:"C:\\Users\\aybasha\\Downloads\\DigitalSixthSenseUpdate\\component\\work\\audio_mss\\mss_tshell.v":1555965180
+#CUR:"C:\\Users\\aybasha\\Downloads\\DigitalSixthSenseUpdate\\component\\work\\audio_mss\\MSS_CCC_0\\audio_mss_tmp_MSS_CCC_0_MSS_CCC.v":1555965180
+#CUR:"C:\\Users\\aybasha\\Downloads\\DigitalSixthSenseUpdate\\component\\work\\audio_mss\\audio_mss.v":1555965180
+0			"C:\Users\aybasha\Downloads\DigitalSixthSenseUpdate\component\Actel\SmartFusionMSS\MSS\2.5.200\mss_comps.v" verilog
+1			"C:\Users\aybasha\Downloads\DigitalSixthSenseUpdate\component\work\audio_mss\mss_tshell.v" verilog
+2			"C:\Users\aybasha\Downloads\DigitalSixthSenseUpdate\component\work\audio_mss\MSS_CCC_0\audio_mss_tmp_MSS_CCC_0_MSS_CCC.v" verilog
+3			"C:\Users\aybasha\Downloads\DigitalSixthSenseUpdate\component\work\audio_mss\audio_mss.v" verilog
 #Dependency Lists(Uses List)
 0 -1
 1 -1

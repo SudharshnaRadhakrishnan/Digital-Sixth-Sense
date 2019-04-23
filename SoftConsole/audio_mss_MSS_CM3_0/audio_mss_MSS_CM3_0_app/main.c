@@ -17,16 +17,20 @@ void level_audio_emit(int level);
 int signal_level_mapping(double signal, int scaling_factor, int constant_factor);
 void level_motor_mapper(int mode, int level);
 void GPIO1_IRQHandler(void);
-
-
+uint32_t level_audio_mapping(int level);
+int aquire_level();
+void motor_routine(int level);
 // Shared Data
 int level = 5;
+int motor_on = 1;
+int motor_state = 0;
+int sound_on = 1;
 
 
 int main(){
 	uint32_t mode = 0;
 	io_init();
-	motor_routine(aquire_level);  
+	motor_routine(aquire_level());
 	return 0;
 }
 
@@ -37,9 +41,9 @@ int aquire_level(){
 
 void motor_routine(int level){
     uint32_t measure_counter = 0;
-    while(MOTOR_ON) {
+    while(motor_on) {
     	if(measure_counter == 20000){
-			level_motor_mapper(mode, level);
+			level_motor_mapper(motor_state, level);
 			go();
 			measure_counter = 0;
     	}
@@ -48,8 +52,8 @@ void motor_routine(int level){
 }
 
 void sound_routine(int level){
-	while(SOUND_ON) {
-		level_audio_emit(level)
+	while(sound_on) {
+		level_audio_emit(level);
     }
 }
 
@@ -95,7 +99,6 @@ void DAC_init(){
 // }
 
 void init_motors_on_mux(){
-	uint8_t i = 0b11111111;
 	tcaselect((uint8_t)0b00011111);
 	init();
 	selectLibrary(1);
@@ -105,6 +108,8 @@ void init_motors_on_mux(){
 
 void level_audio_emit(int level){
 	uint32_t counter = 0;
+	int sigSw = 0;
+	uint32_t outSig = 0;
 	if(counter >= level * 400) {
 		if (sigSw == 0) {
 			outSig = 65536;
@@ -114,12 +119,14 @@ void level_audio_emit(int level){
 			outSig = 0;
 			sigSw = 0;
 		}
-		ACE_set_sdd_value(SDD1_OUT, (uint32_t)(outSig>>4));	
+		ACE_set_sdd_value(SDD1_OUT, outSig >> 4);
 		counter++;
 	}
 }
 
-int level_audio_mapping(int level){
+uint32_t level_audio_mapping(int level){
+	int sigSw = 0;
+	uint32_t outSig = 0;
 	uint32_t counter = 0;
 	if(counter >= level * 400) {
 		if (sigSw == 0) {
@@ -133,13 +140,14 @@ int level_audio_mapping(int level){
 		ACE_set_sdd_value(SDD1_OUT, (uint32_t)(outSig>>4));
 		counter = 0;
 	}
+	return outSig;
 }
 
 int signal_level_mapping(double signal, int scaling_factor, int constant_factor){
 	int level = 5;
 	int power = 2;
 	while(level > 0){
-		if(signal < exp(pow)*scaling_factor + constant_factor){
+		if(signal < exp(power)*scaling_factor + constant_factor){
 			return level;
 		}
 		level--;
@@ -200,7 +208,7 @@ void GPIO1_IRQHandler( void ) {
 	//uint32_t gpioOut = MSS_GPIO_get_outputs();
 	//MSS_GPIO_set_output(MSS_GPIO_0, (~gpioOut));
 	//gpioOut = MSS_GPIO_get_outputs();
-	mode = mode ^ 1;
+	motor_state = motor_state ^ 1;
 	MSS_GPIO_clear_irq( MSS_GPIO_1 );
 }
 

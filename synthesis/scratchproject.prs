@@ -1,17 +1,17 @@
 #--  Synopsys, Inc.
 #--  Version L-2016.09M-SP1-5
-#--  Project file C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis\scratchproject.prs
+#--  Project file C:\Users\aybasha\Downloads\DigitalSixthSenseUpdate\synthesis\scratchproject.prs
 
 #project files
-add_file -verilog "C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/component/Actel/SmartFusionMSS/MSS/2.5.200/mss_comps.v"
-add_file -verilog "C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/component/work/audio_mss/mss_tshell.v"
-add_file -verilog "C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/component/work/audio_mss/MSS_CCC_0/audio_mss_tmp_MSS_CCC_0_MSS_CCC.v"
-add_file -verilog "C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/component/work/audio_mss/audio_mss.v"
+add_file -verilog "C:/Users/aybasha/Downloads/DigitalSixthSenseUpdate/component/Actel/SmartFusionMSS/MSS/2.5.200/mss_comps.v"
+add_file -verilog "C:/Users/aybasha/Downloads/DigitalSixthSenseUpdate/component/work/audio_mss/mss_tshell.v"
+add_file -verilog "C:/Users/aybasha/Downloads/DigitalSixthSenseUpdate/component/work/audio_mss/MSS_CCC_0/audio_mss_tmp_MSS_CCC_0_MSS_CCC.v"
+add_file -verilog "C:/Users/aybasha/Downloads/DigitalSixthSenseUpdate/component/work/audio_mss/audio_mss.v"
 
 
 
 #implementation: "synthesis"
-impl -add C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\synthesis -type fpga
+impl -add C:\Users\aybasha\Downloads\DigitalSixthSenseUpdate\synthesis -type fpga
 
 #
 #implementation attributes
@@ -73,5 +73,5 @@ set_option -auto_infer_blackbox 0
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "C:/Users/sradha/Desktop/DigitalSixthSenseUpdate/synthesis/audio_mss.edn"
+project -result_file "C:/Users/aybasha/Downloads/DigitalSixthSenseUpdate/synthesis/audio_mss.edn"
 impl -active "synthesis"
