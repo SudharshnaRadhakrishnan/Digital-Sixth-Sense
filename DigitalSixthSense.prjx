@@ -385,10 +385,6 @@ Used_File_List
 ENDUsed_File_List
 ENDLIST
 ENDLIST
-LIST PinReports
-VALUE "<project>\designer\impl1\audio_mss_report_pin_byname.txt,log"
-VALUE "<project>\designer\impl1\audio_mss_report_pin_bynumber.txt,log"
-ENDLIST
 ENDLIST
 ENDLIST
 LIST AssociatedStimulus
@@ -532,8 +528,12 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
+Reports;Reports;0
+ReportsCurrentItem;Generate Programming Data:audio_mss_prgdata_log.rpt
 StartPage;StartPage;0
-ACTIVEVIEW;StartPage
+SmartDesign;audio_mss;0
+SmartDesign;audio_des;0
+ACTIVEVIEW;audio_des
 ENDLIST
 LIST ModuleSubBlockList
 LIST "audio_des::work","component\work\audio_des\audio_des.v","TRUE","FALSE"
