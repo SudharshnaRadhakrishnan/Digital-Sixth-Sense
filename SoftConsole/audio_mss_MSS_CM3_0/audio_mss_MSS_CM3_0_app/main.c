@@ -18,13 +18,17 @@ double logcalculator(int pow){
 }
 int main()
 {
+	//Audio GPIO
 	MSS_GPIO_init();
 	MSS_GPIO_config(MSS_GPIO_1, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
 
+	//HE3600 GPIO
 	MSS_GPIO_config(MSS_GPIO_2, MSS_GPIO_OUTPUT_MODE);
 	MSS_GPIO_set_output(MSS_GPIO_2, 1);
 
+	//Enables GPIO interrupt
 	MSS_GPIO_enable_irq( MSS_GPIO_1);
+
 	ACE_init();
     /* DAC initialization */
     ACE_configure_sdd(
@@ -54,7 +58,7 @@ int main()
 
     while(1) {
     	if(measure_counter == 20000){
-    		// FROM LIDAR/MOTOR CODE
+    		//Lidar
 			distance = measure();
 
 			while(distance == -1){
@@ -80,8 +84,8 @@ int main()
 				vibration_strength--;
 				power++;
 			}
+			//Select mode for vibration intensity
 			if (mode == 0) {
-			    //MSS_GPIO_set_outputs(MSS_GPIO_2_MASK | MSS_GPIO_3_MASK | MSS_GPIO_4_MASK | MSS_GPIO_5_MASK | MSS_GPIO_6_MASK);
 				tcaselect((uint8_t)0b00011111);
 				setWaveform(0, 69 - level);
 				go();
@@ -122,7 +126,7 @@ int main()
 			measure_counter = 0;
     	}
 
-    	//__________________________________________________________________________________
+    	//Audio based on distance
     	if (counter >= distance * 40) {
     		if (sigSw == 0) {
     			outSig = 65536;
@@ -147,6 +151,8 @@ int main()
     }
 }
 
+//Handler for changing modes with the button
+//Creates audio when changing modes
 void GPIO1_IRQHandler( void ) {
 	uint32_t gpioOut = 65536;
 	uint32_t sw = 0;
@@ -170,9 +176,6 @@ void GPIO1_IRQHandler( void ) {
 		count += 1;
 		count2 += 1;
 	}
-	//uint32_t gpioOut = MSS_GPIO_get_outputs();
-	//MSS_GPIO_set_output(MSS_GPIO_0, (~gpioOut));
-	//gpioOut = MSS_GPIO_get_outputs();
 	mode = mode ^ 1;
 	MSS_GPIO_clear_irq( MSS_GPIO_1 );
 }

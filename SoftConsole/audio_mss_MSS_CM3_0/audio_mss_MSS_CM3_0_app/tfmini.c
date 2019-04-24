@@ -27,40 +27,29 @@ int measure()
 		while(MSS_UART_get_rx( &g_mss_uart1, rx_buff, sizeof(rx_buff) )){}
 
 		MSS_UART_polled_tx( &g_mss_uart1, setup_buffer, sizeof(setup_buffer) );
-		int rx_size = MSS_UART_get_rx( &g_mss_uart1, rx_buff, sizeof(rx_buff) ); // actual read
+		// actual read
+		int rx_size = MSS_UART_get_rx( &g_mss_uart1, rx_buff, sizeof(rx_buff) );
 
 		char ready0, ready1;
 		ready0 = rx_buff[0];
 		ready1 = rx_buff[1];
 
+		// failed
 		if(ready0 != 0x59 || ready1 != 0x59){
-			// failed
 			++measurementAttempts;
-
 		}
 		else{
 			uint16_t distance = (rx_buff[3] << 8) + rx_buff[2];
+			//Extraneous values
 			if(distance > 1000){
 				++too_large;
 			}
 			else{
-				// success
-				// measurementAttempts = 0;
-				// same intensity mode
-				// map from [30, 500] to [3.7, .7]
-				// calls map function
-				//double voltage = map(750, 30, 500, 3.7, .7);
-
-				//printf("%d", voltage);
-
-				// slyther mode
-				// map from [30, 500] to [n, 0]
-				//
-
 				return distance;
 			}
 			++total_measurements;
 		}
 	}
+	//Fail state
 	return -1;
 }

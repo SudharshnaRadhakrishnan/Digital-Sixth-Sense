@@ -8,7 +8,6 @@
 #include<assert.h>
 
 #define DRV2605_ADDR 0x5A             ///< Device I2C address
-
 #define DRV2605_REG_STATUS 0x00       ///< Status register
 #define DRV2605_REG_MODE 0x01         ///< Mode register
 #define DRV2605_MODE_INTTRIG 0x00     ///< Internal trigger mode
@@ -55,12 +54,9 @@
 #define TCAADDR 0x70
 
 uint8_t readRegister8(uint8_t reg);
-
 void writeRegister8(uint8_t reg, uint8_t val);
 int init();
-
 void setWaveform(uint8_t slot, uint8_t w);
-
 void selectLibrary(uint8_t lib);
 void go();
 void stop();

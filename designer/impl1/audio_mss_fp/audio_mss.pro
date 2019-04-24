@@ -1,6 +1,6 @@
 <project name="audio_mss" version="1.1">
     <ProjectDirectory>
-        C:\Users\aybasha\Downloads\DigitalSixthSenseUpdate\designer\impl1\audio_mss_fp
+        C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\designer\impl1\audio_mss_fp
     </ProjectDirectory>
     <View>
         SingleSTAPLView
@@ -9,7 +9,7 @@
         
     </LiberoTargetDevice>
     <LogFile>
-        C:\Users\aybasha\Downloads\DigitalSixthSenseUpdate\designer\impl1\audio_mss_fp\audio_mss.log
+        C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\designer\impl1\audio_mss_fp\audio_mss.log
     </LogFile>
     <SerializationOption>
         Skip
@@ -74,7 +74,7 @@
         </Hardware>
         <Algo type="PDB">
             <filename>
-                C:\Users\aybasha\Downloads\DigitalSixthSenseUpdate\designer\impl1\audio_mss_fp\audio_mss.pdb
+                C:\Users\sradha\Desktop\DigitalSixthSenseUpdate\designer\impl1\audio_mss_fp\audio_mss.pdb
             </filename>
             <local>
                 projectData\audio_mss.pdb
